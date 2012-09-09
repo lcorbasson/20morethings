@@ -1,27 +1,29 @@
 <?php
 
-import com.fi.twentythings.Article;
-import com.fi.twentythings.Locale;
-import com.fi.twentythings.Page;
-import com.fi.twentythings.Version;
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyService;
+//import com.fi.twentythings.Article;
+//import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Page;
+//import com.fi.twentythings.Version;
+//import com.googlecode.objectify.Objectify;
+//import com.googlecode.objectify.ObjectifyService;
 
 global $ofy, $obj_service, $localeclass, $articleclass, $pageclass, $versionclass, $loc, $langcode;
+  global $versionNumber;
+  $versionNumber = get_version_number();
 
-$localeclass = java_class('com.fi.twentythings.Locale');
-$articleclass = java_class('com.fi.twentythings.Article');
-$pageclass = java_class('com.fi.twentythings.Page');
-$versionclass = java_class('com.fi.twentythings.Version');
+//$localeclass = java_class('com.fi.twentythings.Locale');
+//$articleclass = java_class('com.fi.twentythings.Article');
+//$pageclass = java_class('com.fi.twentythings.Page');
+//$versionclass = java_class('com.fi.twentythings.Version');
 
-ObjectifyService::register($localeclass);
-ObjectifyService::register($articleclass);
-ObjectifyService::register($pageclass);
-ObjectifyService::register($versionclass);
+//ObjectifyService::register($localeclass);
+//ObjectifyService::register($articleclass);
+//ObjectifyService::register($pageclass);
+//ObjectifyService::register($versionclass);
 
-$obj_service = new Java('com.googlecode.objectify.ObjectifyService');
+//$obj_service = new Java('com.googlecode.objectify.ObjectifyService');
 
-$ofy = $obj_service->begin();
+//$ofy = $obj_service->begin();
 
 if (!isset ($_GET['locale']))
 	$langcode = manageLanguage();
@@ -35,23 +37,25 @@ function delete_entity_increment_version($key, $class) {
 	global $ofy, $versionclass, $articleclass;
 	$version;
 
-	if ($ofy->query($versionclass)->filter('id', '1')-> list ()->size() == 0) {
-		$version = new Version('1', '0');
-	} else {
-		$version = $ofy->query($versionclass)->filter('id', '1')->get();
-	}
+//	if ($ofy->query($versionclass)->filter('id', '1')-> list ()->size() == 0) {
+//		$version = new Version('1', '0');
+		$version = array( 1, 0 );
+//	} else {
+//		$version = $ofy->query($versionclass)->filter('id', '1')->get();
+//	}
 
-	$ofy->delete($class, $key);	
+//	$ofy->delete($class, $key);	
 
 	if($class == 'class com.fi.twentythings.Page') {
 		$articlekey = substr($key, 0, strrpos($key, "|"));
-		$article = $ofy->query($articleclass)->filter('id', $articlekey)->get();
-		$article->setNumberOfPages($article->getNumberOfPages() - 1);
-		$ofy->put($article);
+//		$article = $ofy->query($articleclass)->filter('id', $articlekey)->get();
+//		$article->setNumberOfPages($article->getNumberOfPages() - 1);
+//		$ofy->put($article);
 	}
 	
-	$version->setVersion($version->getVersion() + 1);
-	$ofy->put($version);
+//	$version->setVersion($version->getVersion() + 1);
+	$version[1] += 1;
+//	$ofy->put($version);
 }
 
 /**
@@ -63,23 +67,25 @@ function save_entity_increment_version($entity) {
 	global $ofy, $versionclass, $articleclass;
 	$version;
 
-	if ($ofy->query($versionclass)->filter('id', '1')-> list ()->size() == 0) {
-		$version = new Version('1', '0');
-	} else {
-		$version = $ofy->query($versionclass)->filter('id', '1')->get();
-	}
+//	if ($ofy->query($versionclass)->filter('id', '1')-> list ()->size() == 0) {
+//		$version = new Version('1', '0');
+		$version = array( 1, 0 );
+//	} else {
+//		$version = $ofy->query($versionclass)->filter('id', '1')->get();
+//	}
 
-	$ofy->put($entity);
+//	$ofy->put($entity);
 	
 	if($entity->getClass() == 'class com.fi.twentythings.Page') {
 		$articlekey = substr($entity->getId(), 0, strrpos($entity->getId(), "|"));
-		$article = $ofy->query($articleclass)->filter('id', $articlekey)->get();
-		$article->setNumberOfPages($article->getNumberOfPages() + 1);
-		$ofy->put($article);
+//		$article = $ofy->query($articleclass)->filter('id', $articlekey)->get();
+//		$article->setNumberOfPages($article->getNumberOfPages() + 1);
+//		$ofy->put($article);
 	}
 	
-	$version->setVersion($version->getVersion() + 1);
-	$ofy->put($version);
+//	$version->setVersion($version->getVersion() + 1);
+	$version[1] += 1;
+//	$ofy->put($version);
 }
 
 /**
@@ -88,22 +94,28 @@ function save_entity_increment_version($entity) {
 
 function get_version_number() {
 	global $ofy, $versionclass;
-	$version = $ofy->query($versionclass)->filter('id', '1')->get();
+//	$version = $ofy->query($versionclass)->filter('id', '1')->get();
+	$version = null;
 	if ($version == null) {
-		$version = new Version('1', '0');
-		$ofy->put($version);
+//		$version = new Version('1', '0');
+		$version = array( 1, 0 );
+//		$ofy->put($version);
 	}
-	return $version->getVersion();
+//	return $version->getVersion();
+	return $version[1];
 }
 
 function get_version_no_echo() {
 	global $ofy, $versionclass;
-	$version = $ofy->query($versionclass)->filter('id', '1')->get();
+//	$version = $ofy->query($versionclass)->filter('id', '1')->get();
+	$version = null;
 	if ($version == null) {
-		$version = new Version('1', '0');
-		$ofy->put($version);
+//		$version = new Version('1', '0');
+		$version = array( 1, 0 );
+//		$ofy->put($version);
 	}
-	return $version->getVersion();
+//	return $version->getVersion();
+	return $version[1];
 }
 
 /**
@@ -119,19 +131,21 @@ function manageLanguage() {
 	if (isset ($_GET['language']) && preg_match($langPattern, $_GET['language'])) {
 		// If requesting a language in URL, set cookie and continue to output that language.
 		setcookie('language', $_GET['language'], pow(2, 31) - 1, '/');
-		$loc = $ofy->query($localeclass)->filter('id', $_GET['language'])->get();
+//		$loc = $ofy->query($localeclass)->filter('id', $_GET['language'])->get();
 		$lang = $_GET['language'];
 	} else {
 		// No language requested in URL.
 		if (isset ($_COOKIE['language'])) {
 			// If cookie is set, redirect to that language.
-			header('Location: http://'.$_SERVER['HTTP_HOST'].'/'.$_COOKIE['language'].$_SERVER['SCRIPT_URL']);
-			$loc = $ofy->query($localeclass)->filter('id', $_COOKIE['language'])->get();
+//			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.$_COOKIE['language'].substr($_SERVER['SCRIPT_NAME'],strlen(BOOK_URL_ROOT)));
+//TODO:reactivate			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.$_COOKIE['language']);
+//			$loc = $ofy->query($localeclass)->filter('id', $_COOKIE['language'])->get();
 			$lang = $_COOKIE['language'];
 		} else {
 			// If no cookie is set, detect language, and redirect to resulting language.
-			header('Location: http://'.$_SERVER['HTTP_HOST'].'/'.getBrowserLanguage().$_SERVER['SCRIPT_URL']);
-			$loc = $ofy->query($localeclass)->filter('id', getBrowserLanguage())->get();
+//			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.getBrowserLanguage().substr($_SERVER['SCRIPT_NAME'],strlen(BOOK_URL_ROOT)));
+//TODO:reactivate			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.getBrowserLanguage());
+//			$loc = $ofy->query($localeclass)->filter('id', getBrowserLanguage())->get();
 			$lang = getBrowserLanguage();
 		}
 	}
@@ -144,28 +158,28 @@ function manageLanguage() {
 
 function get_locales() {
 	global $ofy, $localeclass;
-	$locales = $ofy->query($localeclass)-> list ();
+//	$locales = $ofy->query($localeclass)-> list ();
 	$returnlocales = '';
 	$index = 1;
-	foreach ($locales as $locale) {
-		$delim = $index < $locales->size() ? '|' : '';
-		$returnlocales .= $locale->getId().$delim;
-		$index++;
-	}
+//	foreach ($locales as $locale) {
+//		$delim = $index < $locales->size() ? '|' : '';
+//		$returnlocales .= $locale->getId().$delim;
+//		$index++;
+//	}
 
 	return explode('|', $returnlocales);
 }
 
 function get_display_locales() {
 	global $ofy, $localeclass;
-	$locales = $ofy->query($localeclass)-> list ();
+//	$locales = $ofy->query($localeclass)-> list ();
 	$returnlocales = '';
 	$index = 1;
-	foreach ($locales as $locale) {
-		$delim = $index < $locales->size() ? ',' : '';
-		$returnlocales .= $locale->getLOCALE_DISPLAY_NAME().'|'.$locale->getId().$delim;
-		$index++;
-	}
+//	foreach ($locales as $locale) {
+//		$delim = $index < $locales->size() ? ',' : '';
+//		$returnlocales .= $locale->getLOCALE_DISPLAY_NAME().'|'.$locale->getId().$delim;
+//		$index++;
+//	}
 
 	return explode(',', $returnlocales);
 
@@ -173,6 +187,7 @@ function get_display_locales() {
 
 function getBrowserLanguage() {
 
+	$bestMatch = false;
 	// List of available translations. Populate this from datastore.
 	// If multiple translations exist for same language (ie. en-US and en-GB),
 	// then the first to occur in this array will take priority.

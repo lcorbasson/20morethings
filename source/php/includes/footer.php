@@ -17,33 +17,33 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Locale;
 
-require('../../locale/locale.php');
+require_once(BOOK_ROOT . '/locale/locale.php');
 
 function get_locale_footer_share() {
-	global $loc; 
-	echo $loc->getLOCALE_FOOTER_SHARE();
+	global $LOCALE_META_TEXT; 
+	echo $LOCALE_META_TEXT['LOCALE_FOOTER_SHARE'];
 }
 
 function get_locale_footer_curator() {
-	global $loc; 
-	echo $loc->getLOCALE_FOOTER_CURATOR();
+	global $LOCALE_META_TEXT; 
+	echo $LOCALE_META_TEXT['LOCALE_FOOTER_CURATOR'];
 }
 
 function get_locale_footer_fullscreen() {
-	global $loc; 
-	echo $loc->getLOCALE_FOOTER_FULLSCREEN();
+	global $LOCALE_META_TEXT; 
+	echo $LOCALE_META_TEXT['LOCALE_FOOTER_FULLSCREEN'];
 }
 
 function get_locale_footer_lights() {
-	global $loc; 
-	echo $loc->getLOCALE_FOOTER_LIGHTS();
+	global $LOCALE_META_TEXT; 
+	echo $LOCALE_META_TEXT['LOCALE_FOOTER_LIGHTS'];
 }
 
 function get_locale_footer_print() {
-	global $loc; 
-	echo $loc->getLOCALE_FOOTER_PRINT();
+	global $LOCALE_META_TEXT; 
+	echo $LOCALE_META_TEXT['LOCALE_FOOTER_PRINT'];
 }
 
 ?>	
@@ -63,7 +63,7 @@ function get_locale_footer_print() {
 				</div>
 				<div class="divider"></div>
 				<div class="print">
-					<a href="/<?php echo $_GET['language']; ?>/all/print" target="_blank"><span class="icon"></span><?php get_locale_footer_print() ?></a>
+					<a href="<?php echo BOOK_ROOT; ?>/<?php echo $_GET['language']; ?>/all/print" target="_blank"><span class="icon"></span><?php get_locale_footer_print() ?></a>
 				</div>
 				<?php if(!is_basic()) : ?>
 					<div class="divider"></div>
@@ -84,8 +84,8 @@ function get_locale_footer_print() {
 		
 		<?php if(is_basic()) : ?>
 			
-			<script type="text/javascript" src="/js/thirdparty/jquery.1.4.2.min.js"></script>
-      <script type="text/javascript" src="/js/twentythings.locale.js"></script>
+			<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/thirdparty/jquery.1.4.2.min.js"></script>
+      <script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.locale.js"></script>
 			<script type="text/javascript">
 				$('img').each(function(){
 					if( $(this).attr('data-src') ){
@@ -98,33 +98,33 @@ function get_locale_footer_print() {
 		
 		<?php elseif(is_live()) : ?>
 		
-		<script type="text/javascript" src="/js/twentythings.min.js?v=<?php echo $versionNumber; ?>"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.min.js?v=<?php echo $versionNumber; ?>"></script>
 		<script type="text/javascript">
 			TT.initialize();
 		</script>
 		
 		<?php else : ?>
 		
-		<script type="text/javascript" src="/js/thirdparty/jquery.1.4.2.min.js"></script>
-		<script type="text/javascript" src="/js/thirdparty/jquery.json-2.2.min.js"></script>
-		<script type="text/javascript" src="/js/thirdparty/jquery.translate-1.3.9.min.js"></script>
-		<script type="text/javascript" src="/js/thirdparty/browserdetect.js"></script>
-		<script type="text/javascript" src="/js/twentythings.js"></script>
-		<script type="text/javascript" src="/js/twentythings.preloader.js"></script>
-		<script type="text/javascript" src="/js/twentythings.history.js"></script>
-		<script type="text/javascript" src="/js/twentythings.storage.js"></script>
-		<script type="text/javascript" src="/js/twentythings.pageflip.js"></script>
-		<script type="text/javascript" src="/js/twentythings.paperstack.js"></script>
-		<script type="text/javascript" src="/js/twentythings.illustrations.js"></script>
-		<script type="text/javascript" src="/js/twentythings.navigation.js"></script>
-		<script type="text/javascript" src="/js/twentythings.cache.js"></script>
-		<script type="text/javascript" src="/js/twentythings.search.js"></script>
-		<script type="text/javascript" src="/js/twentythings.chapternav.js"></script>
-		<script type="text/javascript" src="/js/twentythings.sharing.js"></script>
-		<script type="text/javascript" src="/js/twentythings.overlay.js"></script>
-		<script type="text/javascript" src="/js/twentythings.tableofthings.js"></script>
-		<script type="text/javascript" src="/js/twentythings.flipintro.js"></script>
-		<script type="text/javascript" src="/js/twentythings.locale.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/thirdparty/jquery.1.4.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/thirdparty/jquery.json-2.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/thirdparty/jquery.translate-1.3.9.min.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/thirdparty/browserdetect.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.preloader.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.history.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.storage.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.pageflip.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.paperstack.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.illustrations.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.navigation.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.cache.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.search.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.chapternav.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.sharing.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.overlay.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.tableofthings.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.flipintro.js"></script>
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/twentythings.locale.js"></script>
 		
 		<script type="text/javascript">
 			TT.initialize();

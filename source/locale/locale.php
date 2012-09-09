@@ -18,12 +18,14 @@
  */ 
 	
 	// Include the flexible cross origin policy for this request
-	include_once( '../php/includes/cors.php' );
-	include( '../php/includes/objectify.php' );
+	include_once( BOOK_ROOT . '/php/includes/cors.php' );
+	include_once( BOOK_ROOT . '/php/includes/objectify.php' );
 	
 	global $langcode;
 		
+if (!isset($_SESSION)) {
 	session_start();
+}
 	
 	const LANGUAGE_SESSION_NAME = 'twentythingslocale';
 	const LANGUAGE_CHANGE_QUERY = 'language';
@@ -33,7 +35,15 @@
 	* defining an array of Locale arrays containing values for each Locale name, Locale code, and the paths to the files containing further Locale info.
 	*/
 	
-	define( 'LOCALES', array(	
+	global $LOCALES;
+$LOCALES = array(	
+		array(
+			'name' => 'Français',
+			'code' => 'fr-FR',
+			'pages' => 'fr-FR/pages/',
+			'strings' => 'fr-FR/strings.php',
+			'configuration' => 'fr-FR/configuration.php'
+		),
 		array(
 			'name' => 'English',
 			'code' => 'en-US',
@@ -41,28 +51,27 @@
 			'strings' => 'en-US/strings.php',
 			'configuration' => 'en-US/configuration.php'
 		)
-		
-		
-	) );
+	) ;
 	
 	
   // Default to the first language in the list
   $locale = getLocaleByLanguageCode( $langcode );
   
-  // GLobal locale values
+  // Global locale values
   define( 'LOCALE_NAME', $locale['name'] );
   define( 'LOCALE_CODE', $locale['code'] );
   define( 'LOCALE_PAGES', $locale['pages'] );
   define( 'LOCALE_STRINGS', $locale['strings'] );
   define( 'LOCALE_CONFIGURATION', $locale['configuration'] );
   
-  include( LOCALE_STRINGS );
+  include_once( BOOK_ROOT . '/locale/' . LOCALE_STRINGS );
 	
 	/**
 	 * 
 	 */
 	function getLocaleByLanguageCode( $code ) {
-		foreach( LOCALES as $key => $value ) {
+		global $LOCALES;
+		foreach( $LOCALES as $key => $value ) {
 			if( strtolower( $value['code'] ) === strtolower( $code ) ) {
 				return $value;
 			}

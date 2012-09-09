@@ -17,13 +17,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-require_once('../includes/auth.php');
+require_once(BOOK_ROOT . '/php/includes/auth.php');
 
 import com.fi.twentythings.Page;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
 
-require_once('../includes/objectify.php');
+require_once(BOOK_ROOT . '/php/includes/objectify.php');
 
 /** 
  * this method creates the link used for creating a new Page
@@ -210,7 +210,7 @@ function redirect($url)
 
 	<body> 
 
-		<?php require_once('./cmsnav.php'); ?>
+		<?php require_once(BOOK_ROOT . '/php/admin/cmsnav.php'); ?>
 
 		<h1>Edit Page</h1>
 		

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
@@ -11,15 +11,15 @@
 		
 		<title>20 Things I Learned About Browsers and the Web</title>
 		
-		<link type="text/css" href="/css/reset.css" rel="stylesheet" media="screen, print" />
-		<link type="text/css" href="/css/layouts.css" rel="stylesheet" media="screen, print" />
-		<link type="text/css" href="/css/print-preview.css?v=2" rel="stylesheet" media="screen, print" />
+		<link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/reset.css" rel="stylesheet" media="screen, print" />
+		<link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/layouts.css" rel="stylesheet" media="screen, print" />
+		<link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/print-preview.css?v=2" rel="stylesheet" media="screen, print" />
 		
 		<script type="text/javascript"> 
-			document.write('<link rel="stylesheet" type="text/css" media="all" href="/css/hideOnLoad.css" />');	
+			document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_ROOT; ?>/css/hideOnLoad.css" />');	
 		</script> 
 		
 	</head>
 	<body class="<?php echo body_class(); ?>">
 		
-	<?php include_once("analyticstracking.php") ?>
+	<?php include_once(BOOK_ROOT . "/php/includes/analyticstracking.php") ?>

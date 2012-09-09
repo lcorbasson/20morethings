@@ -17,46 +17,56 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-import com.fi.twentythings.Article;
-import com.fi.twentythings.Locale;
-import com.fi.twentythings.Page;
-import com.fi.twentythings.Version;
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyService;
+//import com.fi.twentythings.Article;
+//import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Page;
+//import com.fi.twentythings.Version;
+//import com.googlecode.objectify.Objectify;
+//import com.googlecode.objectify.ObjectifyService;
+
+//TODO:remove, for debugging
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
+define('BOOK_ROOT', getcwd());
+define('BOOK_URL_ROOT', dirname($_SERVER['SCRIPT_NAME']));
 
 header("Cache-Control: no-cache, must-revalidate");
 header("Content-Type: text/html;charset=UTF-8");
 
-require_once('php/libraries/browser.php');
-require('locale/locale.php');
-require_once('locale/' . LOCALE_CONFIGURATION);
+require_once(BOOK_ROOT . '/php/libraries/browser.php');
+require_once(BOOK_ROOT . '/locale/locale.php');
+require_once(BOOK_ROOT . '/locale/' . LOCALE_CONFIGURATION);
 
 
 /**
  * Java imports
  */
  
-import com.fi.twentythings.Article;
-import com.fi.twentythings.Locale;
-import com.fi.twentythings.Page;
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyService;
+//import com.fi.twentythings.Article;
+//import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Page;
+//import com.googlecode.objectify.Objectify;
+//import com.googlecode.objectify.ObjectifyService;
 
 $browser = new Browser();
-define( 'BROWSER_NAME', $browser->getBrowser() );
-define( 'BROWSER_VERSION', $browser->getVersion() );
+global $BROWSER_NAME;
+$BROWSER_NAME = $browser->getBrowser() ;
+global $BROWSER_VERSION;
+$BROWSER_VERSION = $browser->getVersion() ;
 
 /**
  * Route to basic or advanced
  */
  
 function is_basic() {
+	global $BROWSER_NAME, $BROWSER_VERSION;
 	if(	
-		( BROWSER_NAME == Browser::BROWSER_CHROME && BROWSER_VERSION >= 5 ) ||
-		( BROWSER_NAME == Browser::BROWSER_IE && BROWSER_VERSION >= 9 ) ||
-		( BROWSER_NAME == Browser::BROWSER_FIREFOX && BROWSER_VERSION >= 3.6 ) ||
-		( BROWSER_NAME == Browser::BROWSER_SAFARI && BROWSER_VERSION >= 4 ) ||
-		( BROWSER_NAME == Browser::BROWSER_OPERA && BROWSER_VERSION >= 10 ) ||
+		( $BROWSER_NAME == Browser::BROWSER_CHROME && $BROWSER_VERSION >= 5 ) ||
+		( $BROWSER_NAME == Browser::BROWSER_IE && $BROWSER_VERSION >= 9 ) ||
+		( $BROWSER_NAME == Browser::BROWSER_FIREFOX && $BROWSER_VERSION >= 3.6 ) ||
+		( $BROWSER_NAME == Browser::BROWSER_SAFARI && $BROWSER_VERSION >= 4 ) ||
+		( $BROWSER_NAME == Browser::BROWSER_OPERA && $BROWSER_VERSION >= 10 ) ||
 		is_touchdevice() ||
 		is_chromeframe()
 		) {
@@ -85,14 +95,14 @@ function is_chromeframe(){
  * 
  */
 function is_touchdevice(){
-	return preg_match( '/iPad|iPhone|iPod|Android/', BROWSER_NAME );
+	return preg_match( '/iPad|iPhone|iPod|Android/', $BROWSER_NAME );
 }
 
 /**
  * Determines if we are running on the live server (or locally)
  */
 function is_live() {
-	return preg_match( DEVELOPMENT_HOSTS_EXPRESSION, $_SERVER['SERVER_NAME']) ? false : true;
+	return isset( $DEVELOPMENT_HOSTS_EXPRESSION ) && preg_match( $DEVELOPMENT_HOSTS_EXPRESSION, $_SERVER['SERVER_NAME']) ? false : true;
 }
 
 /**
@@ -135,30 +145,41 @@ function load_articles()
 {
 
 	global $pages, $activePages, $ofy, $localeclass, $articleclass, $pageclass, $langcode, $contents;
+	global $ALL_CHAPTERS;
 	
-	$locales = $ofy->query($localeclass)->filter('id',$langcode)->list();	
+//	$locales = $ofy->query($localeclass)->filter('id',$langcode)->list();	
+	$locales = array( $langcode ); // TODO: add ALL languages
 	
 	foreach ( $locales as $locale ) {
 
-			$localeArticles = $ofy->query($articleclass)->filter('locale',$langcode)->order('order')->list();	//json_decode( $locale->getProperty('articles')->getValue() );
+//			$localeArticles = $ofy->query($articleclass)->filter('locale',$langcode)->order('order')->list();	//json_decode( $locale->getProperty('articles')->getValue() );
+			$localeArticles = $ALL_CHAPTERS;
 			
 			foreach ($localeArticles as $article) {
-				$stub = $article->getStub();
-				$title = $article->getTitle();
-				$subtitle = $article->getSubtitle();
-				$numberofpages = $article->getNumberOfPages();
-				$active = $article->getActive();
-				$hidden = $article->getHidden();
-				$order = $article->getOrder();
+//				$stub = $article->getStub();
+				$stub = $article['stub'];
+//				$title = $article->getTitle();
+				$title = $article['title'];
+//				$subtitle = $article->getSubtitle();
+				$subtitle = $article['subtitle'];
+//				$numberofpages = $article->getNumberOfPages();
+				$numberofpages = $article['numberOfPages'];
+//				$active = $article->getActive();
+				$active = $article['active'];
+//				$hidden = $article->getHidden();
+				$hidden = ( array_key_exists( 'hidden', $article ) ? $article['hidden'] : 0 );
+//				$order = $article->getOrder();
+				$order = $article['order'];
 				
-				$articlepages = $ofy->query($pageclass)->filter('locale',$langcode)->filter('stub', $stub)->list();
+//				$articlepages = $ofy->query($pageclass)->filter('locale',$langcode)->filter('stub', $stub)->list();
 				
-				$contents = array();
-				$templates = array();
-				foreach($articlepages as $articlepage) {
-					array_push($templates, $articlepage->getTemplate());
-					array_push($contents, $articlepage->getContent());
-				}					
+				$contents = array(); // TODO
+//				$templates = array();
+				$templates = $article['templates'];
+//				foreach($articlepages as $articlepage) {
+//					array_push($templates, $articlepage->getTemplate());
+//					array_push($contents, $articlepage->getContent());
+//				}					
 		
 				
 				$pages[$stub] = array(
@@ -198,7 +219,7 @@ load_articles();
 function parse_article_pages()
 {
 	global $pages, $parsedPages, $ofy, $pageclass, $articleclass, $langcode;
-	$querypages = $ofy->query($pageclass)->filter('locale',$langcode)->list();  //->filter('stub', $currentArticle);	
+//	$querypages = $ofy->query($pageclass)->filter('locale',$langcode)->list();  //->filter('stub', $currentArticle);	
 	
 	$i=1;
 	
@@ -206,7 +227,7 @@ function parse_article_pages()
 				
 		if($page->getPageNumber()=='1') {
 			$i = 1;
-			$pagearticleparent = $ofy->query($articleclass)->filter('locale', $langcode)->filter('stub', $page->getStub())->list()->get(0);
+//			$pagearticleparent = $ofy->query($articleclass)->filter('locale', $langcode)->filter('stub', $page->getStub())->list()->get(0);
 		}
 		
 		$pagetitle = $pagearticleparent->getTitle();			
@@ -285,7 +306,7 @@ function nextPrevArticleName($order) {
  */
 function nextPage() {
 	global $activePages, $currentView, $currentArticle, $currentArticlePage;
-  $root = '/' . $_GET['language'] . '/';
+  $root = BOOK_ROOT . '/' . $_GET['language'] . '/';
 	
 	// If we're on the home page, the next button should point to the first article
 	if( $currentView == 'home' ) {
@@ -316,7 +337,7 @@ function nextPage() {
 function prevPage() {
 	global $activePages, $currentView, $currentArticle, $currentArticlePage;
 	
-	$root = '/' . $_GET['language'] . '/';
+	$root = BOOK_ROOT . '/' . $_GET['language'] . '/';
 	
 	// If we're on the home page, the prev button should be inactive
 	if( $currentView == 'home' ) {
@@ -327,7 +348,8 @@ function prevPage() {
 		return $root . getArrayLastIndex( $activePages );
 	}
 
-	if( empty(nextPrevArticleName('prev')) && $currentArticlePage == '1' ){
+	$prev = nextPrevArticleName('prev');
+	if( empty($prev) && $currentArticlePage == '1' ){
 		return $root;
 	} elseif( $currentArticlePage == '1' ) {
 		return $root . nextPrevArticleName('prev') . '/' . $activePages[nextPrevArticleName('prev')]['numberOfPages'];
@@ -343,7 +365,7 @@ function prevPage() {
  * 
  */
 if( isset($_GET['article']) && !$activePages[$_GET['article']] ) {
-	header('Location: /');
+//TODO:reactivate	header('Location: /' . BOOK_ROOT);
 }
 if( $currentView == '404' ) {
 	header("HTTP/1.0 404 Not Found");
@@ -370,9 +392,9 @@ function isPrintPage() {
  * 
  */
 if(isPrintPage()) {
-	require_once('php/includes/header_print.php');
+	require_once(BOOK_ROOT . '/php/includes/header_print.php');
 } elseif(!isStub()) {
-	require_once('php/includes/header.php');
+	require_once(BOOK_ROOT . '/php/includes/header.php');
 } 
 
 /**
@@ -427,7 +449,7 @@ elseif(isset($_GET['article'])) {
 // version of all articles and pages
 elseif(isset($_GET['mode']) && $_GET['mode'] == 'all') {
 	// Include the flexible cross origin policy for this request
-	include_once( 'php/includes/cors.php' );
+	include_once( BOOK_ROOT . '/php/includes/cors.php' );
 	
 	foreach($pages as $name => $value) {
 		if( $value['active'] ) {
@@ -479,11 +501,11 @@ foreach($pages as $name => $value) {
  * 
  */
 if(isPrintPage()) {	
-	require_once('php/includes/footer_print.php');
+	require_once(BOOK_ROOT . '/php/includes/footer_print.php');
 	
 } elseif(!isStub()) {
 
-	require_once('php/includes/content.php');
+	require_once(BOOK_ROOT . '/php/includes/content.php');
 	
 	if(isset($_GET['article'])) echo '<div id="articleId">' . $_GET['article'] . '</div>';
 	if(isset($_GET['page'])) echo '<div id="pageNumber">' . $_GET['page'] . '</div>';
@@ -496,8 +518,8 @@ if(isPrintPage()) {
 	<div id="pagination-next" class="<?php echo $nextClass; ?>"><a href="<?php echo nextPage(); ?>"><div class="arrow"><?php echo LOCALE_NEXT_PAGE; ?></div></a></div>
 	<?php
 	
-	require_once('php/includes/table-of-things.php');
-	require_once('php/includes/footer.php');
+	require_once(BOOK_ROOT . '/php/includes/table-of-things.php');
+	require_once(BOOK_ROOT . '/php/includes/footer.php');
 }
 
 

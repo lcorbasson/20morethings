@@ -21,7 +21,7 @@
 	 * Include the basic configuration values which are shared
 	 * between all locales.
 	 */
-	include_once( '../locale-base-configuration.php' );
+	include_once( BOOK_ROOT . '/locale/locale-base-configuration.php' );
 	
 	/**
 	 * In JavaScript, a solid colored block is drawn behind the
@@ -30,7 +30,8 @@
 	 * will be used for that solid shape, so it needs to match
 	 * the color of the book texture.
 	 */
-	define( 'SOLID_BOOK_COLOR', DEFAULT_SOLID_BOOK_COLOR );
+	global $SOLID_BOOK_COLOR;
+$SOLID_BOOK_COLOR = $DEFAULT_SOLID_BOOK_COLOR ;
 	
 	/** 
 	 * Defines the content structure of the book using:
@@ -48,6 +49,7 @@
 	 * order:			Determines the order in which chapters appear.
 	 */
 	 
+	global $ALL_CHAPTERS;
 	$ALL_CHAPTERS = array(
 		array(
 			'stub' => 'foreword',
@@ -343,13 +345,15 @@
 	 * this array will also be added to the OFFLINE_ASSETS
 	 * array.
 	 */
-	define( 'IMAGE_ASSETS', array_merge( DEFAULT_IMAGE_ASSETS, array( /* Override Assets Here */ ) ) );
+	global $IMAGE_ASSETS;
+$IMAGE_ASSETS = array_merge( $DEFAULT_IMAGE_ASSETS, array( /* Override Assets Here */ ) ) ;
 	
 	/**
 	 * A listing of all assets (static files and URL's) that
 	 * will be cached for offline use.
 	 */
-	define( 'OFFLINE_ASSETS', array_merge( array(
+	global $OFFLINE_ASSETS;
+$OFFLINE_ASSETS = array_merge( array(
 		'/', 
 		'/home', 
 		'/all',
@@ -415,5 +419,5 @@
 		'media/illustrations/url_b5.png',
 		'media/illustrations/url01.png',
 		'media/illustrations/url02.png'
-	), IMAGE_ASSETS ) );
+	), $IMAGE_ASSETS ) ;
 ?>

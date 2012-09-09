@@ -17,22 +17,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 	
-	include( '../php/includes/objectify.php' );
+	include_once( BOOK_ROOT . '/php/includes/objectify.php' );
 	
 	/**
 	 * The current version number of the content and cache manifest,
 	 * must be updated every time the content of the book is
 	 * changed.
 	 */
-	define( 'SITE_VERSION', $versionnumber);
-	define( 'SITE_VERSION_SUFFIX', '?v=' . SITE_VERSION );
+	global $SITE_VERSION;
+$SITE_VERSION = $versionNumber ;
+	global $SITE_VERSION_SUFFIX;
+$SITE_VERSION_SUFFIX = '?v=' . $SITE_VERSION ;
 	
 	/**
 	 * An expression that matches all development hosts.
 	 * When the application runs on a development host,
 	 * it will use unminified JavaScript and CSS.
 	 */
-	define( 'DEVELOPMENT_HOSTS_EXPRESSION', "/localhost/is" );
+	global $DEVELOPMENT_HOSTS_EXPRESSION;
+$DEVELOPMENT_HOSTS_EXPRESSION = "/localhost/is" ;
 	
 	/**
 	 * A list of static image assets used throughout the site,
@@ -42,7 +45,8 @@
 	 * the IMAGE_ASSETS constant which is defined in the
 	 * individual locale configuration files.
 	 */
-	define( 'DEFAULT_IMAGE_ASSETS', array(
+	global $DEFAULT_IMAGE_ASSETS;
+$DEFAULT_IMAGE_ASSETS = array(
     'logo-style' => '',
 		'front-cover' => '/css/images/front-cover.jpg',
 		'back-cover' => '/css/images/back-cover.jpg',
@@ -50,7 +54,7 @@
 		'left-page' => '/css/images/left-page.jpg',
 		'left-page-flipped' => '/css/images/left-page-flipped.jpg',
 		'right-page' => '/css/images/right-page.jpg'
-	) );
+	) ;
 	
 	/**
 	 * In JavaScript, a solid colored block is drawn behind the
@@ -58,6 +62,7 @@
 	 * visible when dragging a hard cover. This is the color 
 	 * that will be used.
 	 */
-	define( 'DEFAULT_SOLID_BOOK_COLOR', '#5873a0' );
+	global $DEFAULT_SOLID_BOOK_COLOR;
+$DEFAULT_SOLID_BOOK_COLOR = '#5873a0' ;
 	
 ?>

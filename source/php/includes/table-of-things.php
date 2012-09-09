@@ -17,21 +17,21 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-require('../../locale/locale.php');
+require_once(BOOK_ROOT . '/locale/locale.php');
 
 function print_locale_toc_title() {
-	global $loc;
-	echo $loc->getLOCALE_TOC_TITLE();				
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_TOC_TITLE'];				
 }
 
 function print_locale_toc_back() {
-	global $loc;
-	echo $loc->getLOCALE_TOC_BACK();				
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_TOC_BACK'];				
 }
 
 function print_locale_thing() {
-	global $loc;
-	echo $loc->getLOCALE_SHARER_LABEL1();				
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_SHARER_LABEL1'];				
 }
 
 ?>
@@ -39,7 +39,7 @@ function print_locale_thing() {
 		<div id="table-of-contents">
 			<div class="center">
 				<div class="header">
-					<a class="go-back" href="/"><?php print_locale_toc_back() ?></a>
+					<a class="go-back" href="<?php echo BOOK_ROOT; ?>/"><?php print_locale_toc_back() ?></a>
 					<h2><span><?php print_locale_toc_title() ?></span></h2>
 					<hr>
 				</div>

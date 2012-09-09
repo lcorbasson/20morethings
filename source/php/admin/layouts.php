@@ -18,7 +18,7 @@
  */ 
  
 session_start();
-require_once('../libraries/browser.php');
+require_once(BOOK_ROOT . '/php/libraries/browser.php');
 
 /**
  * Java imports
@@ -91,7 +91,7 @@ load_articles();
 		echo '<div id="pages">';
 		foreach($pages as $name => $value) {
 			for($i=1; $i<=$value['numberOfPages']; $i++) {
-				require_once('../../pages/'.$name.'-'.$i.'.html');
+				require_once(BOOK_ROOT . '/locale/' . $_GET['language'] . '/pages/'.$name.'-'.$i.'.html');
 			}
 			echo '<div class="spacer"></div>';
 		}

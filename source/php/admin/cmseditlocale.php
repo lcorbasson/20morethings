@@ -17,13 +17,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-import com.fi.twentythings.Locale;
-import com.fi.twentythings.Article;
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyService;
+//import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Article;
+//import com.googlecode.objectify.Objectify;
+//import com.googlecode.objectify.ObjectifyService;
 
-require_once('../includes/auth.php');
-require_once('../includes/objectify.php');
+require_once(BOOK_ROOT . '/php/includes/auth.php');
+require_once(BOOK_ROOT . '/php/includes/objectify.php');
 
 /**
  * this method retrieves all Articles for the specified Locale
@@ -303,7 +303,7 @@ function new_article_link() {
 
 	<body> 
 
-		<?php require_once('./cmsnav.php'); ?>
+		<?php require_once(BOOK_ROOT . '/php/admin/cmsnav.php'); ?>
 
 		<h1>Edit Locale</h1>
 		

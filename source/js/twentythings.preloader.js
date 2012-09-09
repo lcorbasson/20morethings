@@ -104,15 +104,15 @@ TT.preloader.initialize = function() {
   var versionSuffix = '?v=' + 1;
 
   // Now that the images are registered in the queue, start loading them.
-  spritesImage.src = '/css/images/sprites.png' + versionSuffix;
-  frontImage.src = '/css/images/front-cover.jpg' + versionSuffix;
-  backImage.src = '/css/images/back-cover.jpg' + versionSuffix;
-  rightImage.src = '/css/images/right-page.jpg' + versionSuffix;
-  leftImage.src = '/css/images/left-page.jpg' + versionSuffix;
-  repeatImage.src = '/css/images/repeat-x.png' + versionSuffix;
-  paperImage.src = '/css/images/right-page-paper.jpg' + versionSuffix;
-  leftFlippedImage.src = '/css/images/left-page-flipped.jpg' + versionSuffix;
-  backImageFlipped.src = '/css/images/back-cover-flipped.jpg' + versionSuffix;
+  spritesImage.src = rootUrl + '/css/images/sprites.png' + versionSuffix;
+  frontImage.src = rootUrl + '/css/images/front-cover.jpg' + versionSuffix;
+  backImage.src = rootUrl + '/css/images/back-cover.jpg' + versionSuffix;
+  rightImage.src = rootUrl + '/css/images/right-page.jpg' + versionSuffix;
+  leftImage.src = rootUrl + '/css/images/left-page.jpg' + versionSuffix;
+  repeatImage.src = rootUrl + '/css/images/repeat-x.png' + versionSuffix;
+  paperImage.src = rootUrl + '/css/images/right-page-paper.jpg' + versionSuffix;
+  leftFlippedImage.src = rootUrl + '/css/images/left-page-flipped.jpg' + versionSuffix;
+  backImageFlipped.src = rootUrl + '/css/images/back-cover-flipped.jpg' + versionSuffix;
 };
 
 

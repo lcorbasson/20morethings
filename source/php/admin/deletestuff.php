@@ -17,12 +17,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
  
-import com.fi.twentythings.Article;
-import com.fi.twentythings.Locale;
-import com.fi.twentythings.Page;
-import com.fi.twentythings.Version;
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyService;
+//import com.fi.twentythings.Article;
+//import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Page;
+//import com.fi.twentythings.Version;
+//import com.googlecode.objectify.Objectify;
+//import com.googlecode.objectify.ObjectifyService;
 			
 global $ofy, $obj_service, $localeclass, $articleclass, $pageclass, $versionclass, $loc, $langcode;
 

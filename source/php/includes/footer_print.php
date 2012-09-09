@@ -1,10 +1,10 @@
-﻿		
+		
 		<footer>
 			<p class="curator">Published by Google 2010</p>
 		</footer>
 		
 
-		<script type="text/javascript" src="/js/thirdparty/jquery.1.4.2.min.js"></script>		
+		<script type="text/javascript" src="<?php echo BOOK_ROOT; ?>/js/thirdparty/jquery.1.4.2.min.js"></script>		
 		<script type="text/javascript"> 
 
 			$( 'img' ).each( function(){

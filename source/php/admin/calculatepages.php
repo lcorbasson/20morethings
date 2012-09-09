@@ -17,20 +17,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-import com.fi.twentythings.Article;
-import com.fi.twentythings.Locale;
-import com.fi.twentythings.Page;
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyService;
+//import com.fi.twentythings.Article;
+//import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Page;
+//import com.googlecode.objectify.Objectify;
+//import com.googlecode.objectify.ObjectifyService;
 
-require_once('../includes/auth.php');
+require_once(BOOK_ROOT . '/php/includes/auth.php');
 
 /*if(!isset($_REQUEST['locale'])) {
 	echo 'Must set locale.';
 	return;
 }
 
-require('../../locale/locale.php');*/
+require_once(BOOK_ROOT . '/locale/locale.php');*/
 	
 $localeclass = java_class('com.fi.twentythings.Locale');			
 		

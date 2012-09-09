@@ -18,7 +18,8 @@
  */ 
 	// Meta description for the book index (page titles
 	// & subtitles are used for individual pages).
-	define('LOCALE_META_TEXT', array(	
+	global $LOCALE_META_TEXT;
+$LOCALE_META_TEXT = array(	
 			'LOCALE_DISPLAY_NAME' => 'English (US)',
 		
 	'LOCALE_META_DESCRIPTION' => 'Things you always wanted to know about the web but were afraid to ask. Learn about the web & browsers in this interactive experience created by Google & illustrated by Christoph Niemann.' ,
@@ -47,6 +48,7 @@
 	'LOCALE_MENU_TOT' => 'TABLE OF THINGS' ,
 	'LOCALE_MENU_FOREWORD' => 'FOREWORD' ,
 	'LOCALE_MENU_CREDITS' => 'CREDITS' ,
+	'LOCALE_MENU_FORWARD' => 'FORWARD' ,
 	
 	'LOCALE_SEARCH_PLACEHOLDER' => 'Search Book' ,
 	'LOCALE_SEARCH_INVALID' => 'No results found.' ,
@@ -86,8 +88,12 @@
 	'LOCALE_PREVIOUS_PAGE' => 'Previous Page' ,
 	'LOCALE_NEXT_PAGE' => 'Next Page' ,
 	
+	'LOCALE_PRINT_THING_LABEL' => 'Print',
+
+	'LOCALE_TWENTY_THINGS_LABEL' => '20 Things',
+	
 	'LOCALE_SELECT_LANGUAGE' => 'Change Language'
 	
-	));
+	) ;
 	
 ?>

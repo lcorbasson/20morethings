@@ -17,13 +17,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 
-import com.fi.twentythings.Locale;
+//import com.fi.twentythings.Locale;
 
-require('../../locale/locale.php');
+require_once(BOOK_ROOT . '/locale/locale.php');
 
 
 function print_print_path() {
-	global $loc;	
+	global $LOCALE_META_TEXT;	
 	if(strrpos($_SERVER['REQUEST_URI'],$loc->getId())>0) {
 		echo '/'.$loc->getId().'/all/print';		
 	} else {
@@ -32,99 +32,99 @@ function print_print_path() {
 }
 
 function print_locale_overlay_pdf_description() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_PDF_DESCRIPTION();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_PDF_DESCRIPTION'];			
 }
 
 function print_locale_overlay_pdf_title() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_PDF_TITLE();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_PDF_TITLE'];			
 }
 
 function print_locale_overlay_print_description() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_PRINT_DESCRIPTION();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_PRINT_DESCRIPTION'];			
 }
 
 function print_locale_overlay_print_title() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_PRINT_TITLE();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_PRINT_TITLE'];			
 }
 
 function print_locale_overlay_resume_yes() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_RESUME_YES();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_RESUME_YES'];			
 }
 
 function print_locale_overlay_resume_no() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_RESUME_NO();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_RESUME_NO'];			
 }
 
 function print_locale_overlay_resume_description() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_RESUME_DESCRIPTION();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_RESUME_DESCRIPTION'];			
 }
 
 function print_locale_overlay_resume_title() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_RESUME_TITLE();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_RESUME_TITLE'];			
 }
 
 function print_locale_overlay_close() {
-	global $loc;
-	echo $loc->getLOCALE_OVERLAY_CLOSE();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_OVERLAY_CLOSE'];			
 }
 
 
 function print_twenty_things_label() {
-	global $loc;
-	echo $loc->getLOCALE_TWENTY_THINGS_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_TWENTY_THINGS_LABEL'];			
 }
 
 function print_illustration_label() {
-	global $loc;
-	echo $loc->getLOCALE_ILLUSTRATION_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_ILLUSTRATION_LABEL'];			
 }
 
 function print_writers_editors_label() {
-	global $loc;
-	echo $loc->getLOCALE_WRITERS_EDITORS_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_WRITERS_EDITORS_LABEL'];			
 }
 
 function print_project_curator_label() {
-	global $loc;
-	echo $loc->getLOCALE_PROJECT_CURATOR_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_PROJECT_CURATOR_LABEL'];			
 }
 
 function print_design_label() {
-	global $loc;
-	echo $loc->getLOCALE_DESIGN_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_DESIGN_LABEL'];			
 }
 
 function print_development_label() {
-	global $loc;
-	echo $loc->getLOCALE_DEVELOPMENT_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_DEVELOPMENT_LABEL'];			
 }
 
 function print_special_thanks_label() {
-	global $loc;
-	echo $loc->getLOCALE_SPECIAL_THANKS_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_SPECIAL_THANKS_LABEL'];			
 }
 
 function print_html5_label() {
-	global $loc;
-	echo $loc->getLOCALE_BUILT_IN_HTML5_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_BUILT_IN_HTML5_LABEL'];			
 }
 
 function print_share_this_book_label() {
-	global $loc;
-	echo $loc->getLOCALE_SHARE_THIS_BOOK_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_SHARE_THIS_BOOK_LABEL'];			
 }
 
 function print_share_on_label() {
-	global $loc;
-	echo $loc->getLOCALE_SHARE_ON_LABEL();			
+	global $LOCALE_META_TEXT;
+	echo $LOCALE_META_TEXT['LOCALE_SHARE_ON_LABEL'];			
 }
 
 
@@ -133,7 +133,7 @@ function print_share_on_label() {
 			
 			</div>
 			<div id="left-page">
-				<img src="<?php echo IMAGE_ASSETS['left-page'] ?>" data-src-flipped="<?php echo IMAGE_ASSETS['left-page-flipped'] ?>" width="830" height="520">
+				<img src="<?php echo $IMAGE_ASSETS['left-page'] ?>" data-src-flipped="<?php echo $IMAGE_ASSETS['left-page-flipped'] ?>" width="830" height="520">
 			</div>
 			<div id="right-page">
 				<div id="paperstack">
@@ -146,7 +146,7 @@ function print_share_on_label() {
 					<div class="paper s7"></div>
 					<div class="shadow"></div>
 				</div>
-				<img src="<?php echo IMAGE_ASSETS['right-page'] ?>" width="830" height="520">
+				<img src="<?php echo $IMAGE_ASSETS['right-page'] ?>" width="830" height="520">
 			</div>
 		</div>
 		
@@ -167,7 +167,7 @@ function print_share_on_label() {
 							
 							$cnClass = $value['active'] ? $key : 'disabled '.$key;
 							$cnTitle = $value['title'];
-							$cnLink = '/' . $cnClass;
+							$cnLink = BOOK_ROOT . '/' . $cnClass;
 							
 							if( $value['globalStartPage'] == $value['globalEndPage'] ) {
 								$cnPages = ''.$value['globalStartPage'];
@@ -222,7 +222,7 @@ function print_share_on_label() {
 						<h2><?php print_locale_overlay_print_title() ?></h2>
 						<p><?php print_locale_overlay_print_description(); ?></p>
 					</a>
-					<a class="downloadPdf" target="_blank" href="/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
+					<a class="downloadPdf" target="_blank" href="<?php echo BOOK_ROOT; ?>/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
 						<h2><?php print_locale_overlay_pdf_title() ?></h2>
 						<p><?php print_locale_overlay_pdf_description() ?></p>
 					</a>
@@ -244,7 +244,7 @@ function print_share_on_label() {
 				</ul>
 				<h4><?php print_special_thanks_label()?></h4>
 				<p class="special-thanks">Brian Rakowski, Ian Fette, Chris DiBona, Alex Russell, Erik Kay, Jim Roskind, Mike Belshe, Dimitri Glazkov, Henry Bridge, Gregor Hochmuth, Jeffrey Chang, Mark Larson, Aaron Boodman, Wieland Holfelder, Jochen Eisinger, Bernhard Bauer, Adam Barth, Cory Ferreria, Erik Arvidsson, John Abd-Malek, Carlos Pizano, Justin Schuh, Wan-Teh Chang, Vangelis Kokkevis, Mike Jazayeri, Brad Chen, Darin Fisher, Dudley Carr, Richard Rabbat, Ji Lee, Glen Murphy, Valdean Klump, Aaron Koblin, Paul Irish, John Fu, Chris Wright, Sarah Nahm, Christos Apartoglou, Meredith Papp, Eric Antonow, Eitan Bencuya, Jay Nancarrow, Ben Lee, Gina Weakley, Linus Upson, Sundar Pichai & The Google Chrome Team</p>
-				<p class="html5-logo"><?php print_html5_label()?><img src="/media/images/HTML5_Badge_32.png" title="Built in HTML5"></img></p>
+				<p class="html5-logo"><?php print_html5_label()?><img src="<?php echo BOOK_ROOT; ?>/media/images/HTML5_Badge_32.png" title="Built in HTML5"></img></p>
 			</div>
 			<hr>
 			<div class="share">

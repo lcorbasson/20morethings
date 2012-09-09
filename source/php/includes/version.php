@@ -18,11 +18,11 @@
  */ 
  
  
-require_once('../../locale/locale.php');
-require_once('../../locale/' . LOCALE_CONFIGURATION);
+require_once(BOOK_ROOT . '/locale/locale.php');
+require_once(BOOK_ROOT . '/locale/' . LOCALE_CONFIGURATION);
 	
 //Include the flexible cross origin policy for this request
-include_once( '../includes/cors.php' );
+include_once( BOOK_ROOT . '/php/includes/cors.php' );
  	
 echo get_version_number();	
 ?>

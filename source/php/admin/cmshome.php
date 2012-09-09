@@ -18,11 +18,11 @@
  */ 
 
 
-import com.googlecode.objectify.ObjectifyService;
-import com.googlecode.objectify.Objectify;
-import com.fi.twentythings.Locale;
+//import com.googlecode.objectify.ObjectifyService;
+//import com.googlecode.objectify.Objectify;
+//import com.fi.twentythings.Locale;
 
-require_once('../includes/auth.php');
+require_once(BOOK_ROOT . '/php/includes/auth.php');
 
 
 /**
@@ -59,7 +59,7 @@ function locale_codes_dropdown() {
 
 	<body>
 
-		<?php require_once('./cmsnav.php'); ?>
+		<?php require_once(BOOK_ROOT . '/php/admin/cmsnav.php'); ?>
 
 		<h1>Select Locale</h1>		
 		

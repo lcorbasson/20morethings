@@ -19,187 +19,186 @@
  */ 
 
   // Java Imports.
-  import com.fi.twentythings.Locale;
-  import com.googlecode.objectify.Objectify;
-  import com.googlecode.objectify.ObjectifyService;
+  //import com.fi.twentythings.Locale;
+  //import com.googlecode.objectify.Objectify;
+  //import com.googlecode.objectify.ObjectifyService;
   
   // PHP Imports.
-  require('../../locale/locale.php');
-  require_once('../../locale/' . LOCALE_CONFIGURATION);
+  require_once(BOOK_ROOT . '/locale/locale.php');
+  require_once(BOOK_ROOT . '/locale/' . LOCALE_CONFIGURATION);
   
   // Globals.
   $cacheManifest = '';
-  $versionNumber = get_version_number();
   
   // Use cache.manifest in production only.
   if( is_live() ) {
-    $cacheManifest = 'manifest="/' . $_GET['language'] . '/cache.manifest?v=' . $versionNumber . '"';
+    $cacheManifest = 'manifest="' . BOOK_ROOT . '/' . $_GET['language'] . '/cache.manifest?v=' . $versionNumber . '"';
   }
   
   // Data fetchers.
   function get_locale_meta_description() {
-    global $loc;
-    return $loc->getLOCALE_META_DESCRIPTION();
+    global $LOCALE_META_TEXT;
+    return $LOCALE_META_TEXT['LOCALE_META_DESCRIPTION'];
   }
   
   function get_locale_facebook_message() {
-    global $loc;
-    return $loc->getLOCALE_FACEBOOK_MESSAGE();
+    global $LOCALE_META_TEXT;
+    return $LOCALE_META_TEXT['LOCALE_FACEBOOK_MESSAGE'];
   }
   
   function get_locale_facebook_message_single() {
-    global $loc;
-    return $loc->getLOCALE_FACEBOOK_MESSAGE_SINGLE();
+    global $LOCALE_META_TEXT;
+    return $LOCALE_META_TEXT['LOCALE_FACEBOOK_MESSAGE_SINGLE'];
   }
   
   function print_locale_meta_description() {
-    global $loc;
-    echo $loc->getLOCALE_META_DESCRIPTION();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_META_DESCRIPTION'];
   }
   
   function print_locale_facebook_message() {
-    global $loc;
-    echo $loc->getLOCALE_FACEBOOK_MESSAGE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_FACEBOOK_MESSAGE'];
   }
   
   function print_locale_facebook_message_single() {
-    global $loc;
-    echo $loc->getLOCALE_FACEBOOK_MESSAGE_SINGLE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_FACEBOOK_MESSAGE_SINGLE'];
   }
   
   function print_locale_twitter_message() {
-    global $loc;
-    echo $loc->getLOCALE_TWITTER_MESSAGE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_TWITTER_MESSAGE'];
   }
   
   function print_locale_twitter_message_single() {
-    global $loc;
-    echo $loc->getLOCALE_TWITTER_MESSAGE_SINGLE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_TWITTER_MESSAGE_SINGLE'];
   }
   
   function print_locale_buzz_message() {
-    global $loc;
-    echo $loc->getLOCALE_BUZZ_MESSAGE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_BUZZ_MESSAGE'];
   }
   
   function print_locale_buzz_message_single() {
-    global $loc;
-    echo $loc->getLOCALE_BUZZ_MESSAGE_SINGLE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_BUZZ_MESSAGE_SINGLE'];
   }
   
   function print_locale_front_cover_cta() {
-    global $loc;
-    echo $loc->getLOCALE_FRONT_COVER_CTA();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_FRONT_COVER_CTA'];
   }
   
   function print_locale_front_cover_intro() {
-    global $loc;
-    echo $loc->getLOCALE_FRONT_COVER_INTRO();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_FRONT_COVER_INTRO'];
   }
   
   function print_locale_search_invalid() {
-    global $loc;
-    echo $loc->getLOCALE_SEARCH_INVALID();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SEARCH_INVALID'];
   }
   
   function print_locale_search_results_pages() {
-    global $loc;
-    echo $loc->getLOCALE_SEARCH_RESULTS_PAGES();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SEARCH_RESULTS_PAGES'];
   }
   
   function print_locale_search_placeholder() {
-    global $loc;
-    echo $loc->getLOCALE_SEARCH_PLACEHOLDER();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SEARCH_PLACEHOLDER'];
   }
   
   function print_locale_select_language() {
-    global $loc;
-    echo $loc->getLOCALE_SELECT_LANGUAGE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SELECT_LANGUAGE'];
   }
   
   function print_locale_menu_tot() {
-    global $loc;
-    echo $loc->getLOCALE_MENU_TOT();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_MENU_TOT'];
   }
   
   function print_locale_not_supported_ie() {
-    global $loc;
-    echo $loc->getLOCALE_NOT_SUPPORTED_IE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_NOT_SUPPORTED_IE'];
   }
   
   function print_locale_not_supported() {
-    global $loc;
-    echo $loc->getLOCALE_NOT_SUPPORTED();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_NOT_SUPPORTED'];
   }
   
   function print_locale_title() {
-    global $loc;
-    echo $loc->getLOCALE_TITLE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_TITLE'];
   }
   
   function print_locale_sharing_image() {
-    global $loc;
-    echo $loc->getLOCALE_SHARING_IMAGE();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SHARING_IMAGE'];
   }
   
   function print_locale_meta_author() {
-    global $loc;
-    echo $loc->getLOCALE_META_AUTHOR();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_META_AUTHOR'];
   }
   
   function print_locale_meta_keywords() {
-    global $loc;
-    echo $loc->getLOCALE_META_KEYWORDS();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_META_KEYWORDS'];
   }
   
   function print_locale_sharer_label_one() {
-    global $loc;
-    echo $loc->getLOCALE_SHARER_LABEL1();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SHARER_LABEL1'];
   }
   
   function print_locale_sharer_label_two() {
-    global $loc;
-    echo $loc->getLOCALE_SHARER_LABEL2();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_SHARER_LABEL2'];
   }
   
   function print_locale_page_label() {
-    global $loc;
-    echo $loc->getLOCALE_PAGE_LABEL();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_PAGE_LABEL'];
   }
   
   function print_locale_pages_label() {
-    global $loc;
-    echo $loc->getLOCALE_PAGES_LABEL();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_PAGES_LABEL'];
   }
   
   function print_locale_menu_foreword() {
-    global $loc;
-    echo $loc->getLOCALE_MENU_FORWARD();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_MENU_FORWARD'];
   }
   
   function print_locale_menu_credits() {
-    global $loc;
-    echo $loc->getLOCALE_MENU_CREDITS();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_MENU_CREDITS'];
   }
   
   function print_thing() {
-    global $loc;
-    echo $loc->getLOCALE_PRINT_THING_LABEL();
+    global $LOCALE_META_TEXT;
+    echo $LOCALE_META_TEXT['LOCALE_PRINT_THING_LABEL'];
   }
   
   function print_compressed_css() {
     global $versionNumber;
-    echo '<link type="text/css" href="/css/twentythings.min.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />';
-    echo '<link type="text/css" href="/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />';
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/twentythings.min.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />';
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />';
   }
   
   function print_all_css() {
     global $versionNumber;
-    echo '<link type="text/css" href="/css/reset.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
-    echo '<link type="text/css" href="/css/main.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
-    echo '<link type="text/css" href="/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />' . "\n";
-    echo '<link type="text/css" href="/css/layouts.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
-    echo '<link type="text/css" href="/css/illustrations.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/reset.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/main.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/layouts.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/illustrations.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
   }
 
   // Meta data.
@@ -254,13 +253,16 @@
   
   <?php if(is_basic()) : ?>
 
-    <link type="text/css" href="/css/basic.css" rel="stylesheet" media="screen" />
+    <link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/basic.css" rel="stylesheet" media="screen" />
     
+    <script type="text/javascript">
+       var rootUrl = "<?php echo BOOK_ROOT; ?>";
+    </script>
     <!--[if IE 6]>
-    <link type="text/css" href="/css/ie6.css" rel="stylesheet" media="screen" />
+    <link type="text/css" href="css/ie6.css" rel="stylesheet" media="screen" />
     <![endif]-->
     <!--[if lte IE 8]>
-    <script src="/js/twentythings.html5shiv.js" type="text/javascript"></script>
+    <script src="js/twentythings.html5shiv.js" type="text/javascript"></script>
     <![endif]-->
 
     <script type="text/javascript"> 
@@ -272,7 +274,7 @@
   <?php else : ?>
   
     <script type="text/javascript"> 
-      document.write('<link rel="stylesheet" type="text/css" media="all" href="/css/hideOnLoad.css" />');
+      document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_ROOT; ?>/css/hideOnLoad.css" />');
       
       if( window.location.hash.match('\/') ) {
         window.location = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + window.location.hash.slice(1);
@@ -291,7 +293,7 @@
         TWITTER_MESSAGE_SINGLE: "<?php print_locale_twitter_message_single(); ?>",
         BUZZ_MESSAGE: "<?php print_locale_buzz_message(); ?>",
         BUZZ_MESSAGE_SINGLE: "<?php print_locale_buzz_message_single(); ?>",
-        SOLID_BOOK_COLOR: "<?php echo '#5873a0"' //SOLID_BOOK_COLOR ; ?>
+        SOLID_BOOK_COLOR: "<?php echo $SOLID_BOOK_COLOR ; ?>
       };
     </script>
 
@@ -301,12 +303,12 @@
 </head>
 <body class="<?php echo body_class(); ?>">
 
-  <?php include_once("analyticstracking.php"); ?>
+  <?php include_once(BOOK_ROOT . "/php/includes/analyticstracking.php"); ?>
   
   <?php if(is_basic()) : // Show upgrade message. ?>
     <div id="upgrade">
       <p>
-        <?php BROWSER_NAME == Browser::BROWSER_IE ? print_locale_not_supported_ie() : print_locale_not_supported() ?>
+        <?php $BROWSER_NAME == Browser::BROWSER_IE ? print_locale_not_supported_ie() : print_locale_not_supported() ?>
       </p>
     </div>
   <?php endif; ?>
@@ -321,14 +323,14 @@
   </div>
   
   <header>
-    <h1><a class="logo" <?php echo IMAGE_ASSETS['logo-style'] ?> href="/"><?php print_locale_title()?></a></h1>
+    <h1><a class="logo" <?php echo $IMAGE_ASSETS['logo-style'] ?> href="<?php echo BOOK_ROOT; ?>/"><?php print_locale_title()?></a></h1>
     <nav>
       <ul>
-        <li class="table-of-things"><a href="/table-of-things"><?php print_locale_menu_tot(); ?></a></li>
+        <li class="table-of-things"><a href="<?php echo BOOK_ROOT; ?>/table-of-things"><?php print_locale_menu_tot(); ?></a></li>
         <li class="divider1"></li>
-        <li class="about"><a href="/foreword/1"><?php print_locale_menu_foreword() ?></a></li>
+        <li class="about"><a href="<?php echo BOOK_ROOT; ?>/foreword/1"><?php print_locale_menu_foreword() ?></a></li>
         <li class="divider2"></li>
-        <li class="credits"><a href="/credits"><?php print_locale_menu_credits() ?></a></li>
+        <li class="credits"><a href="<?php echo BOOK_ROOT; ?>/credits"><?php print_locale_menu_credits() ?></a></li>
         <li class="divider2"></li>
       </ul>
     </nav>
@@ -384,7 +386,7 @@
               $codeandname = explode('|', $value);
               $dataLocaleCode = $codeandname[1];
               $dataLocaleName = $codeandname[0];
-              $dataLocaleURL = "/" . $dataLocaleCode . $pagePath;
+              $dataLocaleURL = BOOK_ROOT . "/" . $dataLocaleCode . $pagePath;
               
               echo "<li data-locale=\"$dataLocaleCode\">";
               echo "<a href=\"$dataLocaleURL\">$dataLocaleName</a>";
@@ -452,10 +454,10 @@
       </div>
     </div>
     <div id="front-cover">
-      <img src="<?php echo IMAGE_ASSETS['front-cover'] ?>" width="830" height="520">
+      <img src="<?php echo $IMAGE_ASSETS['front-cover'] ?>" width="830" height="520">
     </div>
     <div id="back-cover">
-      <img src="<?php echo IMAGE_ASSETS['back-cover'] ?>" data-src-flipped="<?php echo IMAGE_ASSETS['back-cover-flipped'] ?>" width="830" height="520">
+      <img src="<?php echo $IMAGE_ASSETS['back-cover'] ?>" data-src-flipped="<?php echo $IMAGE_ASSETS['back-cover-flipped'] ?>" width="830" height="520">
     </div>
     <div id="page-shadow-overlay"></div>
     <div id="pages">
