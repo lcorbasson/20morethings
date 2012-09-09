@@ -1,0 +1,371 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config
+END
+IndexYamlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexYamlReader.class
+END
+AppYaml$AdminPage.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$AdminPage.class
+END
+DosXmlReader$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/DosXmlReader$1.class
+END
+AppYaml$ResourceFile.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$ResourceFile.class
+END
+AppYaml$ErrorHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$ErrorHandler.class
+END
+GenerationDirectory.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/GenerationDirectory.class
+END
+CronYamlReader$CronYaml.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/CronYamlReader$CronYaml.class
+END
+AppEngineWebXml$AdminConsolePage.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXml$AdminConsolePage.class
+END
+YamlUtils.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/YamlUtils.class
+END
+QueueXml$RateUnit.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueXml$RateUnit.class
+END
+PluginLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/PluginLoader.class
+END
+AppEngineWebXml.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXml.class
+END
+AppYaml$XmlWriter.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$XmlWriter.class
+END
+AppYaml$Plugin.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$Plugin.class
+END
+QueueXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueXmlReader.class
+END
+IndexesXmlReader$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexesXmlReader$1.class
+END
+IndexYamlReader$IndexYaml$Index.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexYamlReader$IndexYaml$Index.class
+END
+CronXmlReader$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/CronXmlReader$1.class
+END
+AbstractConfigXmlReader$ParserCallback.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AbstractConfigXmlReader$ParserCallback.class
+END
+IndexYamlReader$IndexYaml.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexYamlReader$IndexYaml.class
+END
+AbstractConfigXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AbstractConfigXmlReader.class
+END
+WebXml.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXml.class
+END
+WebXml$SecurityConstraint.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXml$SecurityConstraint.class
+END
+IndexesXml$PropertySort.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexesXml$PropertySort.class
+END
+AppEngineWebXml$ErrorHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXml$ErrorHandler.class
+END
+AppYaml$Handler$Security.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$Handler$Security.class
+END
+AppEngineWebXml$UserPermission.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXml$UserPermission.class
+END
+AppYaml$AdminConsole.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$AdminConsole.class
+END
+AppYaml$Handler$LoginType.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$Handler$LoginType.class
+END
+AppYaml$Handler.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$Handler.class
+END
+DosXml.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/DosXml.class
+END
+AppEngineWebXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXmlReader.class
+END
+CronXml$Entry.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/CronXml$Entry.class
+END
+AppEngineConfigException.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineConfigException.class
+END
+QueueYamlReader$QueueYaml$Entry.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueYamlReader$QueueYaml$Entry.class
+END
+IndexesXml$Index.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexesXml$Index.class
+END
+QueueXmlReader$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueXmlReader$1.class
+END
+AppYaml$StaticFile.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml$StaticFile.class
+END
+IndexesXml.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexesXml.class
+END
+WebXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXmlReader.class
+END
+CronXml.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/CronXml.class
+END
+WebXml$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXml$1.class
+END
+DosXml$BlacklistEntry.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/DosXml$BlacklistEntry.class
+END
+AppEngineWebXmlProcessor.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXmlProcessor.class
+END
+WebXml$SecurityConstraint$RequiredRole.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXml$SecurityConstraint$RequiredRole.class
+END
+QueueYamlReader$QueueYaml.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueYamlReader$QueueYaml.class
+END
+DosYamlReader$DosYaml.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/DosYamlReader$DosYaml.class
+END
+DosXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/DosXmlReader.class
+END
+QueueYamlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueYamlReader.class
+END
+AppEngineWebXmlProcessor$FileType.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXmlProcessor$FileType.class
+END
+DosYamlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/DosYamlReader.class
+END
+QueueXml$Entry.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueXml$Entry.class
+END
+IndexesXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexesXmlReader.class
+END
+AppYaml.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppYaml.class
+END
+IndexYamlReader$IndexYaml$Property.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/IndexYamlReader$IndexYaml$Property.class
+END
+CronXmlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/CronXmlReader.class
+END
+AppEngineWebXml$StaticFileInclude.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/AppEngineWebXml$StaticFileInclude.class
+END
+QueueXml.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/QueueXml.class
+END
+WebXmlReader$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXmlReader$1.class
+END
+CronYamlReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/CronYamlReader.class
+END
+WebXml$SecurityConstraint$TransportGuarantee.class
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/apphosting/utils/config/WebXml$SecurityConstraint$TransportGuarantee.class
+END

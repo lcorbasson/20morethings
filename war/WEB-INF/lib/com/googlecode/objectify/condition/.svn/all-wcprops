@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition
+END
+IfEmptyString.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfEmptyString.class
+END
+PojoIf.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/PojoIf.class
+END
+IfNull.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfNull.class
+END
+IfFalse.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfFalse.class
+END
+IfNotNull.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfNotNull.class
+END
+ValueIf.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/ValueIf.class
+END
+IfZero.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfZero.class
+END
+IfTrue.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfTrue.class
+END
+If.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/If.class
+END
+IfNotZero.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfNotZero.class
+END
+Always.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/Always.class
+END
+IfDefault.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/condition/IfDefault.class
+END

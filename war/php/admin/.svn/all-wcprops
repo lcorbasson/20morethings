@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/1/trunk/war/php/admin
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1/trunk/war/php/admin/login.php
+END
+cmseditlocale.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1/trunk/war/php/admin/cmseditlocale.php
+END
+deletestuff.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/trunk/war/php/admin/deletestuff.php
+END
+cmshome.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/1/trunk/war/php/admin/cmshome.php
+END
+cmseditarticle.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1/trunk/war/php/admin/cmseditarticle.php
+END
+calculatepages.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1/trunk/war/php/admin/calculatepages.php
+END
+layouts.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/1/trunk/war/php/admin/layouts.php
+END
+populateds.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1/trunk/war/php/admin/populateds.php
+END
+cmseditpage.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/trunk/war/php/admin/cmseditpage.php
+END
+cmsnav.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/1/trunk/war/php/admin/cmsnav.php
+END

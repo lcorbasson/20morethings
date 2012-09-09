@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore
+END
+PhoneNumber_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/PhoneNumber_CustomFieldSerializer.class
+END
+Rating_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Rating_CustomFieldSerializer.class
+END
+Text_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Text_CustomFieldSerializer.class
+END
+Email_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Email_CustomFieldSerializer.class
+END
+PostalAddress_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/PostalAddress_CustomFieldSerializer.class
+END
+Key_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Key_CustomFieldSerializer.class
+END
+EntityNotFoundException_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/EntityNotFoundException_CustomFieldSerializer.class
+END
+Cursor_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Cursor_CustomFieldSerializer.class
+END
+Category_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Category_CustomFieldSerializer.class
+END
+Link_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Link_CustomFieldSerializer.class
+END
+Blob_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/Blob_CustomFieldSerializer.class
+END
+ShortBlob_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/ShortBlob_CustomFieldSerializer.class
+END
+GeoPt_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/GeoPt_CustomFieldSerializer.class
+END
+IMHandle_CustomFieldSerializer.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/api/datastore/IMHandle_CustomFieldSerializer.class
+END

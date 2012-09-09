@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io
+END
+LineProcessor.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/LineProcessor.class
+END
+AppendableWriter.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/AppendableWriter.class
+END
+Resources$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/Resources$1.class
+END
+CharStreams$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/CharStreams$1.class
+END
+CharStreams$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/CharStreams$2.class
+END
+Files.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/Files.class
+END
+ByteStreams.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams.class
+END
+ByteProcessor.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteProcessor.class
+END
+CharStreams$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/CharStreams$3.class
+END
+CharStreams$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/CharStreams$4.class
+END
+LineReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/LineReader.class
+END
+ByteArrayDataOutput.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteArrayDataOutput.class
+END
+MultiReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/MultiReader.class
+END
+ByteStreams$ByteArrayDataInputStream.class
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$ByteArrayDataInputStream.class
+END
+ByteBuffers.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteBuffers.class
+END
+ByteStreams$ByteArrayDataOutputStream.class
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$ByteArrayDataOutputStream.class
+END
+InputSupplier.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/InputSupplier.class
+END
+OutputSupplier.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/OutputSupplier.class
+END
+MultiInputStream.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/MultiInputStream.class
+END
+Files$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/Files$1.class
+END
+ByteStreams$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$1.class
+END
+ByteStreams$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$2.class
+END
+Files$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/Files$2.class
+END
+ByteStreams$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$3.class
+END
+ByteStreams$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$4.class
+END
+ByteStreams$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteStreams$5.class
+END
+LineReader$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/LineReader$1.class
+END
+Resources.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/Resources.class
+END
+LimitInputStream.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/LimitInputStream.class
+END
+ByteArrayDataInput.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/ByteArrayDataInput.class
+END
+CharStreams.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/CharStreams.class
+END
+Closeables.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/Closeables.class
+END
+LineBuffer.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/io/LineBuffer.class
+END

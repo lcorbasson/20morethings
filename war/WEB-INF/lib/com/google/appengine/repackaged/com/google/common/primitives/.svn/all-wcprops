@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives
+END
+Booleans.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Booleans.class
+END
+Longs.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Longs.class
+END
+Longs$LongArrayAsList.class
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Longs$LongArrayAsList.class
+END
+Booleans$BooleanArrayAsList.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Booleans$BooleanArrayAsList.class
+END
+Bytes.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Bytes.class
+END
+Ints$LexicographicalComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Ints$LexicographicalComparator.class
+END
+Primitives.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Primitives.class
+END
+Ints$IntArrayAsList.class
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Ints$IntArrayAsList.class
+END
+Ints.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Ints.class
+END
+Booleans$LexicographicalComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Booleans$LexicographicalComparator.class
+END
+Longs$LexicographicalComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Longs$LexicographicalComparator.class
+END
+Bytes$ByteArrayAsList.class
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/Bytes$ByteArrayAsList.class
+END
+IntQueue.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/IntQueue.class
+END
+IntStack.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/common/primitives/IntStack.class
+END

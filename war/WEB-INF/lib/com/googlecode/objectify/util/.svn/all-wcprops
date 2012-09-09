@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util
+END
+ObjectifyWrapper.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/ObjectifyWrapper.class
+END
+QueryResultIteratorWrapper.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/QueryResultIteratorWrapper.class
+END
+TranslatingIterator.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/TranslatingIterator.class
+END
+Monotonic.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/Monotonic.class
+END
+TranslatingQueryResultIterator.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/TranslatingQueryResultIterator.class
+END
+SimpleFutureWrapper.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/SimpleFutureWrapper.class
+END
+QueryWrapper.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/QueryWrapper.class
+END
+FutureHelper.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/FutureHelper.class
+END
+NowFuture.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/NowFuture.class
+END
+DAOBase.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/util/DAOBase.class
+END

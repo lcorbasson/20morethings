@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto
+END
+ProtocolDescriptor$EnumType.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$EnumType.class
+END
+ProtocolDescriptor$WireType.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$WireType.class
+END
+RPC_ServiceDescriptor$Method$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/RPC_ServiceDescriptor$Method$1.class
+END
+ProtocolDescriptor.class
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor.class
+END
+ProtocolDescriptor$Tag.class
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$Tag.class
+END
+ProtocolDescriptor$EnumTypeTag$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$EnumTypeTag$StaticHolder.class
+END
+RPC_ServiceDescriptor.class
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/RPC_ServiceDescriptor.class
+END
+ProtocolDescriptor$TagOption$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$TagOption$StaticHolder.class
+END
+ProtocolDescriptor$Label.class
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$Label.class
+END
+ProtocolDescriptor$EnumType$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$EnumType$StaticHolder.class
+END
+RPC_ServiceDescriptor$Method.class
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/RPC_ServiceDescriptor$Method.class
+END
+ProtocolDescriptor$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$StaticHolder.class
+END
+ProtocolDescriptor$Tag$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$Tag$StaticHolder.class
+END
+ProtocolDescriptor$EnumTypeTag$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$EnumTypeTag$1.class
+END
+RPC_ServiceDescriptor$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/RPC_ServiceDescriptor$StaticHolder.class
+END
+ProtocolDescriptor$TagOption$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$TagOption$1.class
+END
+ProtocolDescriptor$EnumType$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$EnumType$1.class
+END
+RPC_ServiceDescriptor$Method$StaticHolder.class
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/RPC_ServiceDescriptor$Method$StaticHolder.class
+END
+ProtocolDescriptor$Tag$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$Tag$1.class
+END
+ProtocolDescriptor$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$1.class
+END
+ProtocolDescriptor$EnumTypeTag.class
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$EnumTypeTag.class
+END
+RPC_ServiceDescriptor$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/RPC_ServiceDescriptor$1.class
+END
+ProtocolDescriptor$TagOption.class
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$TagOption.class
+END
+ProtocolDescriptor$DeclaredType.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/google/appengine/repackaged/com/google/io/protocol/proto/ProtocolDescriptor$DeclaredType.class
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation
+END
+NotSaved.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/NotSaved.class
+END
+Unindexed.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/Unindexed.class
+END
+Cached.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/Cached.class
+END
+Parent.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/Parent.class
+END
+Serialized.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/Serialized.class
+END
+Entity.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/Entity.class
+END
+AlsoLoad.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/AlsoLoad.class
+END
+Indexed.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1/trunk/war/WEB-INF/lib/com/googlecode/objectify/annotation/Indexed.class
+END
