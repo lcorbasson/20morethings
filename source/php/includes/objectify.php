@@ -128,23 +128,28 @@ function manageLanguage() {
 	// Valid language codes.
 	$langPattern = '/^(en-US|en-GB|fr-FR|pt-BR|zh-CN|in-ID|pl-PL|cs-CZ|de-DE|es-419|es-ES|fil-PH|it-IT|ru-RU|ja-JP|zh-TW|nl-NL)$/i';
 
+	$url = explode('/', trim(substr($_SERVER['REQUEST_URI'],strlen(BOOK_URL_ROOT)), '/'));
+
 	if (isset ($_GET['language']) && preg_match($langPattern, $_GET['language'])) {
 		// If requesting a language in URL, set cookie and continue to output that language.
 		setcookie('language', $_GET['language'], pow(2, 31) - 1, '/');
 //		$loc = $ofy->query($localeclass)->filter('id', $_GET['language'])->get();
 		$lang = $_GET['language'];
+	} elseif (isset($url[0]) && preg_match($langPattern, $url[0])) {
+		setcookie('language', $url[0], pow(2, 31) - 1, '/');
+		$lang = $url[0];
 	} else {
 		// No language requested in URL.
 		if (isset ($_COOKIE['language'])) {
 			// If cookie is set, redirect to that language.
 //			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.$_COOKIE['language'].substr($_SERVER['SCRIPT_NAME'],strlen(BOOK_URL_ROOT)));
-//TODO:reactivate			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.$_COOKIE['language']);
+ 			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.$_COOKIE['language']);
 //			$loc = $ofy->query($localeclass)->filter('id', $_COOKIE['language'])->get();
 			$lang = $_COOKIE['language'];
 		} else {
 			// If no cookie is set, detect language, and redirect to resulting language.
 //			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.getBrowserLanguage().substr($_SERVER['SCRIPT_NAME'],strlen(BOOK_URL_ROOT)));
-//TODO:reactivate			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.getBrowserLanguage());
+			header('Location: http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT.'/'.getBrowserLanguage());
 //			$loc = $ofy->query($localeclass)->filter('id', getBrowserLanguage())->get();
 			$lang = getBrowserLanguage();
 		}

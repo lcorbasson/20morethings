@@ -4,24 +4,23 @@ AddType text/cache-manifest .manifest
 
 RewriteEngine on
 
-RewriteBase /album_test/v1/source/
+RewriteBase /album_test/repo/source/
 
-#RewriteCond %{SCRIPT_FILENAME} index.php
-#RewriteRule .* - [L]
+# Do not rewrite if a matching file or directory exists
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} -d
+RewriteRule .* - [L]
 
 # If url is /all
-RewriteRule ^([a-z]+-[A-Z0-9]+)/all/?$ index.php?language=$1&mode=all [DPI,L]
+RewriteRule ^all/?$ index.php?mode=all [L]
 
 # If no page number provided, assume page=1
-#RewriteRule ^([a-zA-Z-]+)/?$ index.php?article=$1&page=1 [DPI,L]
-RewriteRule ^([a-z]+-[A-Z0-9]+)/([a-zA-Z-]+)/?$ index.php?language=$1&article=$2&page=1 [DPI,L]
+RewriteRule ^([a-zA-Z-]+)/?$ index.php?article=$1&page=1 [L]
 
 # If /stub is on end without a page number, assume page=1 and set mode=stub
-#RewriteRule ^([a-zA-Z-]+)/stub/?$ index.php?article=$1&page=1&mode=stub [DPI,L]
-RewriteRule ^([a-z]+-[A-Z0-9]+)/([a-zA-Z-]+)/stub/?$ index.php?language=$1&article=$2&page=1&mode=stub [DPI,L]
+RewriteRule ^([a-zA-Z-]+)/stub/?$ index.php?article=$1&page=1&mode=stub [L]
 
 # All other pages should match this expression
-#RewriteRule ^([a-zA-Z-]+)/?([0-9]*)?/?(stub)?/?$ index.php?article=$1&page=$2&mode=$3 [DPI,L]
-RewriteRule ^([a-z]+-[A-Z0-9]+)/([a-zA-Z-]+)/?([0-9]*)?/?(stub)?/?$ index.php?language=$1&article=$2&page=$3&mode=$4 [DPI,L]
+RewriteRule ^([a-zA-Z-]+)/?([0-9]*)?/?(stub)?/?$ index.php?article=$1&page=$2&mode=$3 [L]
 
 </IfModule>

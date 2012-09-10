@@ -34,6 +34,7 @@ define('BOOK_URL_ROOT', dirname($_SERVER['SCRIPT_NAME']));
 header("Cache-Control: no-cache, must-revalidate");
 header("Content-Type: text/html;charset=UTF-8");
 
+require_once(BOOK_ROOT . '/php/includes/url.php');
 require_once(BOOK_ROOT . '/php/libraries/browser.php');
 require_once(BOOK_ROOT . '/locale/locale.php');
 require_once(BOOK_ROOT . '/locale/' . LOCALE_CONFIGURATION);
@@ -378,7 +379,7 @@ function prevPage() {
  * 
  */
 if( isset($_GET['article']) && !$activePages[$_GET['article']] ) {
-//TODO:reactivate	header('Location: /' . BOOK_URL_ROOT);
+	header('Location: /' . BOOK_URL_ROOT);
 }
 if( $currentView == '404' ) {
 	header("HTTP/1.0 404 Not Found");
