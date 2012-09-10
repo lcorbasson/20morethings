@@ -24,10 +24,11 @@ require_once(BOOK_ROOT . '/locale/locale.php');
 
 function print_print_path() {
 	global $LOCALE_META_TEXT;	
-	if(strrpos($_SERVER['REQUEST_URI'],$loc->getId())>0) {
-		echo '/'.$loc->getId().'/all/print';		
+//	if(strrpos($_SERVER['REQUEST_URI'],$loc->getId())>0) {
+	if(strrpos($_SERVER['REQUEST_URI'],$_GET['language'])>0) {
+		echo '/'.$_GET['language'].'/all/print';		
 	} else {
-		echo '../'.$loc->getId().'/all/print';		
+		echo '../'.$_GET['language'].'/all/print';		
 	}	
 }
 

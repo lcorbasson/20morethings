@@ -8,7 +8,9 @@
 		<script type="text/javascript"> 
 
 			$( 'img' ).each( function(){
-				$(this).attr( 'src', $(this).attr('data-src') );
+				if( $(this).attr('data-src') ){
+					$(this).attr( 'src', rootUrl + '/' + $(this).attr('data-src') );
+				}
 			});
 			window.onload = function() {
 				setTimeout(function(){

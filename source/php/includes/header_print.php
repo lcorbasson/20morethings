@@ -15,6 +15,11 @@
 		<link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/layouts.css" rel="stylesheet" media="screen, print" />
 		<link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/print-preview.css?v=2" rel="stylesheet" media="screen, print" />
 		
+    <script type="text/javascript">
+       var rootUrl = "<?php echo BOOK_URL_ROOT; ?>";
+       var lang = "<?php echo $_GET['language']; ?>";
+    </script>
+
 		<script type="text/javascript"> 
 			document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_URL_ROOT; ?>/css/hideOnLoad.css" />');	
 		</script> 

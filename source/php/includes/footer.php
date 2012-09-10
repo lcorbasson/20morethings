@@ -89,7 +89,7 @@ function get_locale_footer_print() {
 			<script type="text/javascript">
 				$('img').each(function(){
 					if( $(this).attr('data-src') ){
-						$(this).attr( 'src', rootUrl + '/' + lang + '/' + $(this).attr('data-src') );
+						$(this).attr( 'src', rootUrl + '/' + $(this).attr('data-src') );
 					}
         });
         

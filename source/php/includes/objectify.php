@@ -76,12 +76,12 @@ function save_entity_increment_version($entity) {
 
 //	$ofy->put($entity);
 	
-	if($entity->getClass() == 'class com.fi.twentythings.Page') {
-		$articlekey = substr($entity->getId(), 0, strrpos($entity->getId(), "|"));
+//	if($entity->getClass() == 'class com.fi.twentythings.Page') {
+//		$articlekey = substr($entity->getId(), 0, strrpos($entity->getId(), "|"));
 //		$article = $ofy->query($articleclass)->filter('id', $articlekey)->get();
 //		$article->setNumberOfPages($article->getNumberOfPages() + 1);
 //		$ofy->put($article);
-	}
+//	}
 	
 //	$version->setVersion($version->getVersion() + 1);
 	$version[1] += 1;

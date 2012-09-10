@@ -93,6 +93,16 @@ $LOCALE_META_TEXT = array(
 	'LOCALE_PRINT_THING_LABEL' => 'Print',
 
 	'LOCALE_TWENTY_THINGS_LABEL' => '20 Things',
+	'LOCALE_ILLUSTRATION_LABEL' => 'Illustration',
+	'LOCALE_WRITERS_EDITORS_LABEL' => 'Writers/Editors',
+	'LOCALE_PROJECT_CURATOR_LABEL' => 'Project Curator',
+	'LOCALE_DESIGN_LABEL' => 'Design',
+	'LOCALE_DEVELOPMENT_LABEL' => 'Development',
+	'LOCALE_SPECIAL_THANKS_LABEL' => 'Very Special Thanks To',
+	'LOCALE_BUILT_IN_HTML5_LABEL' => 'Built in HTML5',
+
+	'LOCALE_SHARE_THIS_BOOK_LABEL' => 'Share this book and what you\'ve learned with friends and family; www.20thingsilearned.com',
+	'LOCALE_SHARE_ON_LABEL' => 'Share On',
 	
 	'LOCALE_SELECT_LANGUAGE' => 'Change Language'
 	

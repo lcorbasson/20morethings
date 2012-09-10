@@ -522,8 +522,8 @@ if(isPrintPage()) {
 	$nextClass = !nextPage() ? 'inactive' : '';
 	
 	?>
-	<div id="pagination-prev" class="<?php echo $prevClass; ?>"><a href="<?php echo prevPage(); ?>"><div class="arrow"><?php echo LOCALE_PREVIOUS_PAGE; ?></div></a></div>
-	<div id="pagination-next" class="<?php echo $nextClass; ?>"><a href="<?php echo nextPage(); ?>"><div class="arrow"><?php echo LOCALE_NEXT_PAGE; ?></div></a></div>
+	<div id="pagination-prev" class="<?php echo $prevClass; ?>"><a href="<?php echo prevPage(); ?>"><div class="arrow"><?php echo $LOCALE_META_TEXT['LOCALE_PREVIOUS_PAGE']; ?></div></a></div>
+	<div id="pagination-next" class="<?php echo $nextClass; ?>"><a href="<?php echo nextPage(); ?>"><div class="arrow"><?php echo $LOCALE_META_TEXT['LOCALE_NEXT_PAGE']; ?></div></a></div>
 	<?php
 	
 	require_once(BOOK_ROOT . '/php/includes/table-of-things.php');
