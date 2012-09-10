@@ -40,7 +40,7 @@ TT.illustrations.FRAME_RATE = 30;
  * The location of all our illustration asset images.
  * @type {string}
  */
-TT.illustrations.ASSETS_URL = rootUrl + '/media/illustrations/';
+TT.illustrations.ASSETS_URL = SERVER_VARIABLES.ROOT_URL + '/media/illustrations/';
 
 
 /**

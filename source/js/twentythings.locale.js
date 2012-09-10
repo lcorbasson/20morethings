@@ -66,7 +66,7 @@ TT.locale.initialize = function() {
     var targetURL =
         TT.locale.removeLocaleCodeFromURL(document.location.pathname);
 
-    document.location = rootUrl + '/' + targetLocale + targetURL;
+    document.location = SERVER_VARIABLES.ROOT_URL + '/' + targetLocale + targetURL;
 
     event.preventDefault();
   });

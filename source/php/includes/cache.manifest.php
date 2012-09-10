@@ -17,7 +17,7 @@ CACHE:
 <?php 
 	require_once(BOOK_ROOT . '/locale/locale.php');
 	foreach( $OFFLINE_ASSETS as $asset ) {
-		echo $asset . '?v='. $versionNumber . "\n";
+		echo BOOK_URL_ROOT . '/' . $asset . '?v='. $versionNumber . "\n";
 	}
 ?>
 

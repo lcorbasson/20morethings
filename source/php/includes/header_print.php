@@ -16,8 +16,22 @@
 		<link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/print-preview.css?v=2" rel="stylesheet" media="screen, print" />
 		
     <script type="text/javascript">
-       var rootUrl = "<?php echo BOOK_URL_ROOT; ?>";
-       var lang = "<?php echo $_GET['language']; ?>";
+      var SERVER_VARIABLES = {
+	ROOT_URL: "<?php echo BOOK_URL_ROOT; ?>",
+        PAGE: "<?php print_locale_page_label(); ?>",
+        PAGES:  "<?php print_locale_pages_label(); ?>",
+        THING:  "<?php print_locale_sharer_label_one(); ?>",
+        FOREWORD:  "<?php print_locale_menu_foreword(); ?>",
+        LANG: <?php echo '"' . $_GET['language'] . '"'; ?>,
+        SITE_VERSION: <?php echo $versionNumber; ?>,
+        FACEBOOK_MESSAGE: "<?php print_locale_facebook_message(); ?>",
+        FACEBOOK_MESSAGE_SINGLE: "<?php echo print_locale_facebook_message_single(); ?>",
+        TWITTER_MESSAGE: "<?php print_locale_twitter_message(); ?>",
+        TWITTER_MESSAGE_SINGLE: "<?php print_locale_twitter_message_single(); ?>",
+        BUZZ_MESSAGE: "<?php print_locale_buzz_message(); ?>",
+        BUZZ_MESSAGE_SINGLE: "<?php print_locale_buzz_message_single(); ?>",
+        SOLID_BOOK_COLOR: "<?php echo $SOLID_BOOK_COLOR ; ?>"
+      };
     </script>
 
 		<script type="text/javascript"> 

@@ -114,7 +114,7 @@ TT.storage.getArticlesFromServer = function() {
   var disabledArticles = TT.chapternav.getDisabledArticles();
 
   $.ajax({
-    url: '/' + SERVER_VARIABLES.LANG + '/all',
+    url: SERVER_VARIABLES.ROOT_URL + '/' + SERVER_VARIABLES.LANG + '/all',
     contentType: 'text/html;charset=UTF-8',
     success: function(data) {
 
@@ -172,7 +172,7 @@ TT.storage.getArticlesFromServerTranslated = function() {
   var disabledArticles = TT.chapternav.getDisabledArticles();
 
   $.ajax({
-    url: '/all',
+    url: SERVER_VARIABLES.ROOT_URL + '/' + SERVER_VARIABLES.LANG + '/all',
     contentType: 'text/html;charset=UTF-8',
     success: function(data) {
 

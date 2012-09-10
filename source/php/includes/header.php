@@ -249,16 +249,32 @@
   
   <title><?php print_locale_title()?></title>
   
+    <script type="text/javascript">
+
+      var SERVER_VARIABLES = {
+	ROOT_URL: "<?php echo BOOK_URL_ROOT; ?>",
+        PAGE: "<?php print_locale_page_label(); ?>",
+        PAGES:  "<?php print_locale_pages_label(); ?>",
+        THING:  "<?php print_locale_sharer_label_one(); ?>",
+        FOREWORD:  "<?php print_locale_menu_foreword(); ?>",
+        LANG: <?php echo '"' . $_GET['language'] . '"'; ?>,
+        SITE_VERSION: <?php echo $versionNumber; ?>,
+        FACEBOOK_MESSAGE: "<?php print_locale_facebook_message(); ?>",
+        FACEBOOK_MESSAGE_SINGLE: "<?php echo print_locale_facebook_message_single(); ?>",
+        TWITTER_MESSAGE: "<?php print_locale_twitter_message(); ?>",
+        TWITTER_MESSAGE_SINGLE: "<?php print_locale_twitter_message_single(); ?>",
+        BUZZ_MESSAGE: "<?php print_locale_buzz_message(); ?>",
+        BUZZ_MESSAGE_SINGLE: "<?php print_locale_buzz_message_single(); ?>",
+        SOLID_BOOK_COLOR: "<?php echo $SOLID_BOOK_COLOR ; ?>"
+      };
+    </script>
+
   <?php if(is_live()) {print_compressed_css();} else {print_all_css();} ?>
   
   <?php if(is_basic()) : ?>
 
     <link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/basic.css" rel="stylesheet" media="screen" />
     
-    <script type="text/javascript">
-       var rootUrl = "<?php echo BOOK_URL_ROOT; ?>";
-       var lang = "<?php echo $_GET['language']; ?>";
-    </script>
     <!--[if IE 6]>
     <link type="text/css" href="css/ie6.css" rel="stylesheet" media="screen" />
     <![endif]-->
@@ -281,21 +297,6 @@
         window.location = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + window.location.hash.slice(1);
       }
 
-      var SERVER_VARIABLES = {
-        PAGE: "<?php print_locale_page_label(); ?>",
-        PAGES:  "<?php print_locale_pages_label(); ?>",
-        THING:  "<?php print_locale_sharer_label_one(); ?>",
-        FOREWORD:  "<?php print_locale_menu_foreword(); ?>",
-        LANG: <?php echo '"' . $_GET['language'] . '"'; ?>,
-        SITE_VERSION: <?php echo $versionNumber; ?>,
-        FACEBOOK_MESSAGE: "<?php print_locale_facebook_message(); ?>",
-        FACEBOOK_MESSAGE_SINGLE: "<?php echo print_locale_facebook_message_single(); ?>",
-        TWITTER_MESSAGE: "<?php print_locale_twitter_message(); ?>",
-        TWITTER_MESSAGE_SINGLE: "<?php print_locale_twitter_message_single(); ?>",
-        BUZZ_MESSAGE: "<?php print_locale_buzz_message(); ?>",
-        BUZZ_MESSAGE_SINGLE: "<?php print_locale_buzz_message_single(); ?>",
-        SOLID_BOOK_COLOR: "<?php echo $SOLID_BOOK_COLOR ; ?>
-      };
     </script>
 
   <?php endif; ?>

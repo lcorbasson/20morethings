@@ -105,6 +105,7 @@ function is_touchdevice(){
  */
 function is_live() {
 	global $DEVELOPMENT_HOSTS_EXPRESSION;
+//	return false; // TODO FIXME for DEBUGGING
 	return preg_match( $DEVELOPMENT_HOSTS_EXPRESSION, $_SERVER['SERVER_NAME']) ? false : true;
 }
 
@@ -301,8 +302,12 @@ function nextPrevArticleName($order) {
 	global $activePages, $currentArticle;  //
 	$keys = array_keys($activePages); 
 	$position = array_search($currentArticle, $keys); 
-	if (isset($keys[$position + 1]) || isset($keys[$position - 1])) { 
-		$nextPrevArticleName = $order == 'next' ? $keys[$position + 1] : $keys[$position - 1];
+	$nextPrevArticleName = '';
+	if ($order == 'prev' && isset($keys[$position - 1])) { 
+		$nextPrevArticleName = $keys[$position - 1];
+	}
+	if ($order == 'next' && isset($keys[$position + 1])) { 
+		$nextPrevArticleName = $keys[$position + 1];
 	}
 	return $nextPrevArticleName;
 }

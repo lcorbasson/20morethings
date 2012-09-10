@@ -104,15 +104,15 @@ TT.preloader.initialize = function() {
   var versionSuffix = '?v=' + 1;
 
   // Now that the images are registered in the queue, start loading them.
-  spritesImage.src = rootUrl + '/css/images/sprites.png' + versionSuffix;
-  frontImage.src = rootUrl + '/css/images/front-cover.jpg' + versionSuffix;
-  backImage.src = rootUrl + '/css/images/back-cover.jpg' + versionSuffix;
-  rightImage.src = rootUrl + '/css/images/right-page.jpg' + versionSuffix;
-  leftImage.src = rootUrl + '/css/images/left-page.jpg' + versionSuffix;
-  repeatImage.src = rootUrl + '/css/images/repeat-x.png' + versionSuffix;
-  paperImage.src = rootUrl + '/css/images/right-page-paper.jpg' + versionSuffix;
-  leftFlippedImage.src = rootUrl + '/css/images/left-page-flipped.jpg' + versionSuffix;
-  backImageFlipped.src = rootUrl + '/css/images/back-cover-flipped.jpg' + versionSuffix;
+  spritesImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/sprites.png' + versionSuffix;
+  frontImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/front-cover.jpg' + versionSuffix;
+  backImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/back-cover.jpg' + versionSuffix;
+  rightImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/right-page.jpg' + versionSuffix;
+  leftImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/left-page.jpg' + versionSuffix;
+  repeatImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/repeat-x.png' + versionSuffix;
+  paperImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/right-page-paper.jpg' + versionSuffix;
+  leftFlippedImage.src = SERVER_VARIABLES.ROOT_URL + '/css/images/left-page-flipped.jpg' + versionSuffix;
+  backImageFlipped.src = SERVER_VARIABLES.ROOT_URL + '/css/images/back-cover-flipped.jpg' + versionSuffix;
 };
 
 
@@ -244,8 +244,8 @@ TT.preloader.finish = function() {
  */
 TT.preloader.loadIllustrations = function() {
   $('div.page').find('img').each(function() {
-    if ($(this).attr('src') !== $(this).attr('data-src')) {
-      $(this).attr('src', $(this).attr('data-src'));
+    if ($(this).attr('src') !== SERVER_VARIABLES.ROOT_URL + '/' + $(this).attr('data-src')) {
+      $(this).attr('src', SERVER_VARIABLES.ROOT_URL + '/' + $(this).attr('data-src'));
     }
   });
 };

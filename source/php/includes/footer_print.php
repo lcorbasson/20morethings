@@ -9,7 +9,7 @@
 
 			$( 'img' ).each( function(){
 				if( $(this).attr('data-src') ){
-					$(this).attr( 'src', rootUrl + '/' + $(this).attr('data-src') );
+					$(this).attr( 'src', SERVER_VARIABLES.ROOT_URL + '/' + $(this).attr('data-src') );
 				}
 			});
 			window.onload = function() {

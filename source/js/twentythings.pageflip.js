@@ -286,13 +286,13 @@ TT.pageflip.unregisterEventListeners = function() {
  */
 TT.pageflip.createTextures = function() {
   TT.pageflip.flippedLeftPage = $('<img>', {
-    src: $('#left-page img').attr('data-src-flipped'),
+    src: SERVER_VARIABLES.ROOT_URL + '/' + $('#left-page img').attr('data-src-flipped'),
     width: $('#left-page img').attr('width'),
     height: $('#left-page img').attr('height')
   })[0];
 
   TT.pageflip.flippedBackCover = $('<img>', {
-    src: $('#back-cover img').attr('data-src-flipped'),
+    src: SERVER_VARIABLES.ROOT_URL + '/' + $('#back-cover img').attr('data-src-flipped'),
     width: $('#back-cover img').attr('width'),
     height: $('#back-cover img').attr('height')
   })[0];

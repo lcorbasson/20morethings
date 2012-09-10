@@ -882,8 +882,8 @@ TT.navigation.loadImages = function(articleId, pageNumber) {
 
   for (var i = 0; i < pages.length; i++) {
     pages[i].find('img').each(function() {
-      if ($(this).attr('src') !== $(this).attr('data-src')) {
-        $(this).attr('src', $(this).attr('data-src'));
+      if ($(this).attr('src') !== SERVER_VARIABLES.ROOT_URL + '/' + $(this).attr('data-src')) {
+        $(this).attr('src', SERVER_VARIABLES.ROOT_URL + '/' + $(this).attr('data-src'));
       }
     });
   }
