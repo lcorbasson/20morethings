@@ -24,6 +24,7 @@
   //import com.googlecode.objectify.ObjectifyService;
   
   // PHP Imports.
+require_once(BOOK_ROOT . '/php/includes/url.php');
   require_once(BOOK_ROOT . '/locale/locale.php');
   require_once(BOOK_ROOT . '/locale/' . LOCALE_CONFIGURATION);
   
@@ -32,7 +33,7 @@
   
   // Use cache.manifest in production only.
   if( is_live() ) {
-    $cacheManifest = 'manifest="' . BOOK_URL_ROOT . '/' . $_GET['language'] . '/cache.manifest?v=' . $versionNumber . '"';
+    $cacheManifest = 'manifest="' . BOOK_URL_ROOT . '/' . $GLOBALS['GET_language'] . '/cache.manifest?v=' . $versionNumber . '"';
   }
   
   // Data fetchers.
@@ -252,12 +253,12 @@
     <script type="text/javascript">
 
       var SERVER_VARIABLES = {
-	ROOT_URL: "<?php echo BOOK_URL_ROOT; ?>",
+	ROOT_URL: "<?php echo 'http://'.$_SERVER['HTTP_HOST'].BOOK_URL_ROOT; ?>",
         PAGE: "<?php print_locale_page_label(); ?>",
         PAGES:  "<?php print_locale_pages_label(); ?>",
         THING:  "<?php print_locale_sharer_label_one(); ?>",
         FOREWORD:  "<?php print_locale_menu_foreword(); ?>",
-        LANG: <?php echo '"' . $_GET['language'] . '"'; ?>,
+        LANG: <?php echo '"' . $GLOBALS['GET_language'] . '"'; ?>,
         SITE_VERSION: <?php echo $versionNumber; ?>,
         FACEBOOK_MESSAGE: "<?php print_locale_facebook_message(); ?>",
         FACEBOOK_MESSAGE_SINGLE: "<?php echo print_locale_facebook_message_single(); ?>",
@@ -325,14 +326,14 @@
   </div>
   
   <header>
-    <h1><a class="logo" <?php echo $IMAGE_ASSETS['logo-style'] ?> href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/"><?php print_locale_title()?></a></h1>
+    <h1><a class="logo" <?php echo $IMAGE_ASSETS['logo-style'] ?> href="<?php echo BOOK_URL_ROOT . '/' . $GLOBALS['GET_language']; ?>/"><?php print_locale_title()?></a></h1>
     <nav>
       <ul>
-        <li class="table-of-things"><a href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/table-of-things"><?php print_locale_menu_tot(); ?></a></li>
+        <li class="table-of-things"><a href="<?php echo BOOK_URL_ROOT . '/' . $GLOBALS['GET_language']; ?>/table-of-things"><?php print_locale_menu_tot(); ?></a></li>
         <li class="divider1"></li>
-        <li class="about"><a href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/foreword/1"><?php print_locale_menu_foreword() ?></a></li>
+        <li class="about"><a href="<?php echo BOOK_URL_ROOT . '/' . $GLOBALS['GET_language']; ?>/foreword/1"><?php print_locale_menu_foreword() ?></a></li>
         <li class="divider2"></li>
-        <li class="credits"><a href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/credits"><?php print_locale_menu_credits() ?></a></li>
+        <li class="credits"><a href="<?php echo BOOK_URL_ROOT . '/' . $GLOBALS['GET_language']; ?>/credits"><?php print_locale_menu_credits() ?></a></li>
         <li class="divider2"></li>
       </ul>
     </nav>
@@ -345,7 +346,7 @@
           $codeandname = explode('|', $value);
           $dataLocaleCode = $codeandname[1];
           $dataLocaleName = $codeandname[0];
-          if ($dataLocaleCode == $_GET['language']) {
+          if ($dataLocaleCode == $GLOBALS['GET_language']) {
             echo $dataLocaleName;
             break;
           }

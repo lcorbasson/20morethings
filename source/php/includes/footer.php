@@ -19,6 +19,7 @@
 
 //import com.fi.twentythings.Locale;
 
+require_once(BOOK_ROOT . '/php/includes/url.php');
 require_once(BOOK_ROOT . '/locale/locale.php');
 
 function get_locale_footer_share() {
@@ -63,7 +64,7 @@ function get_locale_footer_print() {
 				</div>
 				<div class="divider"></div>
 				<div class="print">
-					<a href="<?php echo BOOK_URL_ROOT; ?>/<?php echo $_GET['language']; ?>/all/print" target="_blank"><span class="icon"></span><?php get_locale_footer_print() ?></a>
+					<a href="<?php echo BOOK_URL_ROOT; ?>/<?php echo $GLOBALS['GET_language']; ?>/all/print" target="_blank"><span class="icon"></span><?php get_locale_footer_print() ?></a>
 				</div>
 				<?php if(!is_basic()) : ?>
 					<div class="divider"></div>

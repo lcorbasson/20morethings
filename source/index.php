@@ -29,7 +29,7 @@ ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 
 define('BOOK_ROOT', getcwd());
-define('BOOK_URL_ROOT', dirname($_SERVER['SCRIPT_NAME']));
+define('BOOK_URL_ROOT', dirname($_SERVER['SCRIPT_NAME']) == '/' ? '' : dirname($_SERVER['SCRIPT_NAME']));
 
 header("Cache-Control: no-cache, must-revalidate");
 header("Content-Type: text/html;charset=UTF-8");
@@ -188,7 +188,7 @@ function load_articles()
 				foreach($articlepages as $articlepage) {
 //					array_push($templates, $articlepage->getTemplate());
 //					array_push($contents, $articlepage->getContent());
-					array_push($contents, file_get_contents( BOOK_ROOT . '/locale/' . $_GET['language'] . '/pages/' . $articlepage ));
+					array_push($contents, file_get_contents( BOOK_ROOT . '/locale/' . $GLOBALS['GET_language'] . '/pages/' . $articlepage ));
 				}					
 		
 				
@@ -320,7 +320,7 @@ function nextPrevArticleName($order) {
  */
 function nextPage() {
 	global $activePages, $currentView, $currentArticle, $currentArticlePage;
-  $root = BOOK_URL_ROOT . '/' . $_GET['language'] . '/';
+  $root = BOOK_URL_ROOT . '/' . $GLOBALS['GET_language'] . '/';
 	
 	// If we're on the home page, the next button should point to the first article
 	if( $currentView == 'home' ) {
@@ -351,7 +351,7 @@ function nextPage() {
 function prevPage() {
 	global $activePages, $currentView, $currentArticle, $currentArticlePage;
 	
-	$root = BOOK_URL_ROOT . '/' . $_GET['language'] . '/';
+	$root = BOOK_URL_ROOT . '/' . $GLOBALS['GET_language'] . '/';
 	
 	// If we're on the home page, the prev button should be inactive
 	if( $currentView == 'home' ) {

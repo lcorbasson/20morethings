@@ -100,7 +100,16 @@ TT.storage.save = function() {
  * @return {boolean} Whether UA supports local storage.
  */
 TT.storage.supportsLocalStorage = function() {
-  return ('localStorage' in window) && window['localStorage'] !== null;
+  var hasSupport = false;
+  if ( ('localStorage' in window) && window['localStorage'] !== null ) {
+    try {
+      window.localStorage.setItem("ABC", "ABC");
+      hasSupport = true;
+    } catch (e) {
+      hasSupport = false;
+    }
+  }
+  return hasSupport;
 };
 
 

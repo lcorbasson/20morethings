@@ -1,8 +1,9 @@
 <?php header('Content-type: text/cache-manifest'); ?>
 CACHE MANIFEST
 <?php 
+	require_once(BOOK_ROOT . '/php/includes/url.php');
 	require_once(BOOK_ROOT . '/locale/locale.php');
-	$lang = $_GET['language'];
+	$lang = $GLOBALS['GET_language'];
 	//echo 'in cache manifest and lang is ' . $lang;
 	require_once(BOOK_ROOT . '/locale/' . $lang . '/configuration.php');
 	$versionNumber = get_version_number();

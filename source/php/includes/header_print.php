@@ -22,7 +22,7 @@
         PAGES:  "<?php print_locale_pages_label(); ?>",
         THING:  "<?php print_locale_sharer_label_one(); ?>",
         FOREWORD:  "<?php print_locale_menu_foreword(); ?>",
-        LANG: <?php echo '"' . $_GET['language'] . '"'; ?>,
+        LANG: <?php echo '"' . $GLOBALS['GET_language'] . '"'; ?>,
         SITE_VERSION: <?php echo $versionNumber; ?>,
         FACEBOOK_MESSAGE: "<?php print_locale_facebook_message(); ?>",
         FACEBOOK_MESSAGE_SINGLE: "<?php echo print_locale_facebook_message_single(); ?>",

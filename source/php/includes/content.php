@@ -19,16 +19,17 @@
 
 //import com.fi.twentythings.Locale;
 
+require_once(BOOK_ROOT . '/php/includes/url.php');
 require_once(BOOK_ROOT . '/locale/locale.php');
 
 
 function print_print_path() {
 	global $LOCALE_META_TEXT;	
 //	if(strrpos($_SERVER['REQUEST_URI'],$loc->getId())>0) {
-	if(strrpos($_SERVER['REQUEST_URI'],$_GET['language'])>0) {
-		echo '/'.$_GET['language'].'/all/print';		
+	if(strrpos($_SERVER['REQUEST_URI'],$GLOBALS['GET_language'])>0) {
+		echo '/'.$GLOBALS['GET_language'].'/all/print';		
 	} else {
-		echo '../'.$_GET['language'].'/all/print';		
+		echo '../'.$GLOBALS['GET_language'].'/all/print';		
 	}	
 }
 
@@ -168,7 +169,7 @@ function print_share_on_label() {
 							
 							$cnClass = $value['active'] ? $key : 'disabled '.$key;
 							$cnTitle = $value['title'];
-							$cnLink = BOOK_URL_ROOT . '/' . $_GET['language'] . '/' . $cnClass;
+							$cnLink = BOOK_URL_ROOT . '/' . $GLOBALS['GET_language'] . '/' . $cnClass;
 							
 							if( $value['globalStartPage'] == $value['globalEndPage'] ) {
 								$cnPages = ''.$value['globalStartPage'];

@@ -6,6 +6,7 @@
 //import com.fi.twentythings.Version;
 //import com.googlecode.objectify.Objectify;
 //import com.googlecode.objectify.ObjectifyService;
+require_once(BOOK_ROOT . '/php/includes/url.php');
 
 global $ofy, $obj_service, $localeclass, $articleclass, $pageclass, $versionclass, $loc, $langcode;
   global $versionNumber;
@@ -128,16 +129,11 @@ function manageLanguage() {
 	// Valid language codes.
 	$langPattern = '/^(en-US|en-GB|fr-FR|pt-BR|zh-CN|in-ID|pl-PL|cs-CZ|de-DE|es-419|es-ES|fil-PH|it-IT|ru-RU|ja-JP|zh-TW|nl-NL)$/i';
 
-	$url = explode('/', trim(substr($_SERVER['REQUEST_URI'],strlen(BOOK_URL_ROOT)), '/'));
-
-	if (isset ($_GET['language']) && preg_match($langPattern, $_GET['language'])) {
+	if (isset ($GLOBALS['GET_language']) && preg_match($langPattern, $GLOBALS['GET_language'])) {
 		// If requesting a language in URL, set cookie and continue to output that language.
-		setcookie('language', $_GET['language'], pow(2, 31) - 1, '/');
-//		$loc = $ofy->query($localeclass)->filter('id', $_GET['language'])->get();
-		$lang = $_GET['language'];
-	} elseif (isset($url[0]) && preg_match($langPattern, $url[0])) {
-		setcookie('language', $url[0], pow(2, 31) - 1, '/');
-		$lang = $url[0];
+		setcookie('language', $GLOBALS['GET_language'], pow(2, 31) - 1, '/');
+//		$loc = $ofy->query($localeclass)->filter('id', $GLOBALS['GET_language'])->get();
+		$lang = $GLOBALS['GET_language'];
 	} else {
 		// No language requested in URL.
 		if (isset ($_COOKIE['language'])) {
