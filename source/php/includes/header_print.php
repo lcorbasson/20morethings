@@ -11,12 +11,12 @@
 		
 		<title>20 Things I Learned About Browsers and the Web</title>
 		
-		<link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/reset.css" rel="stylesheet" media="screen, print" />
-		<link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/layouts.css" rel="stylesheet" media="screen, print" />
-		<link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/print-preview.css?v=2" rel="stylesheet" media="screen, print" />
+		<link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/reset.css" rel="stylesheet" media="screen, print" />
+		<link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/layouts.css" rel="stylesheet" media="screen, print" />
+		<link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/print-preview.css?v=2" rel="stylesheet" media="screen, print" />
 		
 		<script type="text/javascript"> 
-			document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_ROOT; ?>/css/hideOnLoad.css" />');	
+			document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_URL_ROOT; ?>/css/hideOnLoad.css" />');	
 		</script> 
 		
 	</head>

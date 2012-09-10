@@ -70,6 +70,7 @@ function is_basic() {
 		is_touchdevice() ||
 		is_chromeframe()
 		) {
+//return true; // TODO FIXME for DEBUGGING
 		return false;
 	} else {
 		return true;
@@ -95,6 +96,7 @@ function is_chromeframe(){
  * 
  */
 function is_touchdevice(){
+	global $BROWSER_NAME;
 	return preg_match( '/iPad|iPhone|iPod|Android/', $BROWSER_NAME );
 }
 
@@ -102,7 +104,8 @@ function is_touchdevice(){
  * Determines if we are running on the live server (or locally)
  */
 function is_live() {
-	return isset( $DEVELOPMENT_HOSTS_EXPRESSION ) && preg_match( $DEVELOPMENT_HOSTS_EXPRESSION, $_SERVER['SERVER_NAME']) ? false : true;
+	global $DEVELOPMENT_HOSTS_EXPRESSION;
+	return preg_match( $DEVELOPMENT_HOSTS_EXPRESSION, $_SERVER['SERVER_NAME']) ? false : true;
 }
 
 /**
@@ -172,14 +175,19 @@ function load_articles()
 				$order = $article['order'];
 				
 //				$articlepages = $ofy->query($pageclass)->filter('locale',$langcode)->filter('stub', $stub)->list();
+				$articlepages = array();
+				for ( $i = 1; $i <= $numberofpages; $i++ ) {
+					array_push( $articlepages, $stub . '-' . $i . '.html' );
+				}
 				
-				$contents = array(); // TODO
+				$contents = array();
 //				$templates = array();
 				$templates = $article['templates'];
-//				foreach($articlepages as $articlepage) {
+				foreach($articlepages as $articlepage) {
 //					array_push($templates, $articlepage->getTemplate());
 //					array_push($contents, $articlepage->getContent());
-//				}					
+					array_push($contents, file_get_contents( BOOK_ROOT . '/locale/' . $_GET['language'] . '/pages/' . $articlepage ));
+				}					
 		
 				
 				$pages[$stub] = array(
@@ -306,7 +314,7 @@ function nextPrevArticleName($order) {
  */
 function nextPage() {
 	global $activePages, $currentView, $currentArticle, $currentArticlePage;
-  $root = BOOK_ROOT . '/' . $_GET['language'] . '/';
+  $root = BOOK_URL_ROOT . '/' . $_GET['language'] . '/';
 	
 	// If we're on the home page, the next button should point to the first article
 	if( $currentView == 'home' ) {
@@ -337,7 +345,7 @@ function nextPage() {
 function prevPage() {
 	global $activePages, $currentView, $currentArticle, $currentArticlePage;
 	
-	$root = BOOK_ROOT . '/' . $_GET['language'] . '/';
+	$root = BOOK_URL_ROOT . '/' . $_GET['language'] . '/';
 	
 	// If we're on the home page, the prev button should be inactive
 	if( $currentView == 'home' ) {
@@ -365,7 +373,7 @@ function prevPage() {
  * 
  */
 if( isset($_GET['article']) && !$activePages[$_GET['article']] ) {
-//TODO:reactivate	header('Location: /' . BOOK_ROOT);
+//TODO:reactivate	header('Location: /' . BOOK_URL_ROOT);
 }
 if( $currentView == '404' ) {
 	header("HTTP/1.0 404 Not Found");

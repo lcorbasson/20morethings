@@ -32,7 +32,7 @@
   
   // Use cache.manifest in production only.
   if( is_live() ) {
-    $cacheManifest = 'manifest="' . BOOK_ROOT . '/' . $_GET['language'] . '/cache.manifest?v=' . $versionNumber . '"';
+    $cacheManifest = 'manifest="' . BOOK_URL_ROOT . '/' . $_GET['language'] . '/cache.manifest?v=' . $versionNumber . '"';
   }
   
   // Data fetchers.
@@ -173,7 +173,7 @@
   
   function print_locale_menu_foreword() {
     global $LOCALE_META_TEXT;
-    echo $LOCALE_META_TEXT['LOCALE_MENU_FORWARD'];
+    echo $LOCALE_META_TEXT['LOCALE_MENU_FOREWORD'];
   }
   
   function print_locale_menu_credits() {
@@ -188,17 +188,17 @@
   
   function print_compressed_css() {
     global $versionNumber;
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/twentythings.min.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />';
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />';
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/twentythings.min.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />';
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />';
   }
   
   function print_all_css() {
     global $versionNumber;
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/reset.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/main.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />' . "\n";
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/layouts.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
-    echo '<link type="text/css" href="' . BOOK_ROOT . '/css/illustrations.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/reset.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/main.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/print.css?v='.$versionNumber.'" rel="stylesheet" media="print" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/layouts.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
+    echo '<link type="text/css" href="' . BOOK_URL_ROOT . '/css/illustrations.css?v='.$versionNumber.'" rel="stylesheet" media="screen" />' . "\n";
   }
 
   // Meta data.
@@ -253,10 +253,11 @@
   
   <?php if(is_basic()) : ?>
 
-    <link type="text/css" href="<?php echo BOOK_ROOT; ?>/css/basic.css" rel="stylesheet" media="screen" />
+    <link type="text/css" href="<?php echo BOOK_URL_ROOT; ?>/css/basic.css" rel="stylesheet" media="screen" />
     
     <script type="text/javascript">
-       var rootUrl = "<?php echo BOOK_ROOT; ?>";
+       var rootUrl = "<?php echo BOOK_URL_ROOT; ?>";
+       var lang = "<?php echo $_GET['language']; ?>";
     </script>
     <!--[if IE 6]>
     <link type="text/css" href="css/ie6.css" rel="stylesheet" media="screen" />
@@ -274,7 +275,7 @@
   <?php else : ?>
   
     <script type="text/javascript"> 
-      document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_ROOT; ?>/css/hideOnLoad.css" />');
+      document.write('<link rel="stylesheet" type="text/css" media="all" href="<?php echo BOOK_URL_ROOT; ?>/css/hideOnLoad.css" />');
       
       if( window.location.hash.match('\/') ) {
         window.location = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + window.location.hash.slice(1);
@@ -323,14 +324,14 @@
   </div>
   
   <header>
-    <h1><a class="logo" <?php echo $IMAGE_ASSETS['logo-style'] ?> href="<?php echo BOOK_ROOT; ?>/"><?php print_locale_title()?></a></h1>
+    <h1><a class="logo" <?php echo $IMAGE_ASSETS['logo-style'] ?> href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/"><?php print_locale_title()?></a></h1>
     <nav>
       <ul>
-        <li class="table-of-things"><a href="<?php echo BOOK_ROOT; ?>/table-of-things"><?php print_locale_menu_tot(); ?></a></li>
+        <li class="table-of-things"><a href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/table-of-things"><?php print_locale_menu_tot(); ?></a></li>
         <li class="divider1"></li>
-        <li class="about"><a href="<?php echo BOOK_ROOT; ?>/foreword/1"><?php print_locale_menu_foreword() ?></a></li>
+        <li class="about"><a href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/foreword/1"><?php print_locale_menu_foreword() ?></a></li>
         <li class="divider2"></li>
-        <li class="credits"><a href="<?php echo BOOK_ROOT; ?>/credits"><?php print_locale_menu_credits() ?></a></li>
+        <li class="credits"><a href="<?php echo BOOK_URL_ROOT . '/' . $_GET['language']; ?>/credits"><?php print_locale_menu_credits() ?></a></li>
         <li class="divider2"></li>
       </ul>
     </nav>
@@ -353,9 +354,9 @@
       <div id="language-selector-list">
         <ul>
           <?php 
-            $pagePath = $_SERVER["REQUEST_URI"];
+            $pagePath = substr( $_SERVER["REQUEST_URI"], strlen( BOOK_URL_ROOT ) );
             //echo $pagePath;
-            $pagePath = preg_replace( '/\?(.*)/gi', '', $pagePath );
+            $pagePath = preg_replace( '/\?(.*)/i', '', $pagePath );
             //echo '1st mod to pagepath = '.$pagePath;
             
             $pos = strrpos($pagePath, 'fil-PH');
@@ -364,20 +365,20 @@
             $specialcase = false;
             
             if ($pos == true) {
-              $pagePath = preg_replace( '/(fil-PH)//gi', '', $pagePath );
+              $pagePath = preg_replace( '/(fil-PH)/i', '', $pagePath );
               //echo 'fil-PH mod to pagepath = '.$pagePath;
               $specialcase = true;
             }
             
             $pos = strrpos($pagePath, 'es-419');
             if ($pos == true) {
-              $pagePath = preg_replace( '/(es-419)//gi', '', $pagePath );
+              $pagePath = preg_replace( '/(es-419)/i', '', $pagePath );
               //echo 'es-419 mod to pagepath = '.$pagePath;
               $specialcase = true;
             }
             
             if(!$specialcase == true) {
-              $pagePath = preg_replace( '/(..\-..)//gi', '', $pagePath );
+              $pagePath = preg_replace( '/(..\-..)/i', '', $pagePath );
             }
             
             $localedisplayvalues = get_display_locales();
@@ -386,7 +387,7 @@
               $codeandname = explode('|', $value);
               $dataLocaleCode = $codeandname[1];
               $dataLocaleName = $codeandname[0];
-              $dataLocaleURL = BOOK_ROOT . "/" . $dataLocaleCode . $pagePath;
+              $dataLocaleURL = BOOK_URL_ROOT . "/" . $dataLocaleCode . $pagePath;
               
               echo "<li data-locale=\"$dataLocaleCode\">";
               echo "<a href=\"$dataLocaleURL\">$dataLocaleName</a>";

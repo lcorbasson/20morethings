@@ -167,7 +167,7 @@ function print_share_on_label() {
 							
 							$cnClass = $value['active'] ? $key : 'disabled '.$key;
 							$cnTitle = $value['title'];
-							$cnLink = BOOK_ROOT . '/' . $cnClass;
+							$cnLink = BOOK_URL_ROOT . '/' . $_GET['language'] . '/' . $cnClass;
 							
 							if( $value['globalStartPage'] == $value['globalEndPage'] ) {
 								$cnPages = ''.$value['globalStartPage'];
@@ -222,7 +222,7 @@ function print_share_on_label() {
 						<h2><?php print_locale_overlay_print_title() ?></h2>
 						<p><?php print_locale_overlay_print_description(); ?></p>
 					</a>
-					<a class="downloadPdf" target="_blank" href="<?php echo BOOK_ROOT; ?>/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
+					<a class="downloadPdf" target="_blank" href="<?php echo BOOK_URL_ROOT; ?>/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
 						<h2><?php print_locale_overlay_pdf_title() ?></h2>
 						<p><?php print_locale_overlay_pdf_description() ?></p>
 					</a>
@@ -244,7 +244,7 @@ function print_share_on_label() {
 				</ul>
 				<h4><?php print_special_thanks_label()?></h4>
 				<p class="special-thanks">Brian Rakowski, Ian Fette, Chris DiBona, Alex Russell, Erik Kay, Jim Roskind, Mike Belshe, Dimitri Glazkov, Henry Bridge, Gregor Hochmuth, Jeffrey Chang, Mark Larson, Aaron Boodman, Wieland Holfelder, Jochen Eisinger, Bernhard Bauer, Adam Barth, Cory Ferreria, Erik Arvidsson, John Abd-Malek, Carlos Pizano, Justin Schuh, Wan-Teh Chang, Vangelis Kokkevis, Mike Jazayeri, Brad Chen, Darin Fisher, Dudley Carr, Richard Rabbat, Ji Lee, Glen Murphy, Valdean Klump, Aaron Koblin, Paul Irish, John Fu, Chris Wright, Sarah Nahm, Christos Apartoglou, Meredith Papp, Eric Antonow, Eitan Bencuya, Jay Nancarrow, Ben Lee, Gina Weakley, Linus Upson, Sundar Pichai & The Google Chrome Team</p>
-				<p class="html5-logo"><?php print_html5_label()?><img src="<?php echo BOOK_ROOT; ?>/media/images/HTML5_Badge_32.png" title="Built in HTML5"></img></p>
+				<p class="html5-logo"><?php print_html5_label()?><img src="<?php echo BOOK_URL_ROOT; ?>/media/images/HTML5_Badge_32.png" title="Built in HTML5"></img></p>
 			</div>
 			<hr>
 			<div class="share">

@@ -48,12 +48,12 @@ $DEVELOPMENT_HOSTS_EXPRESSION = "/localhost/is" ;
 	global $DEFAULT_IMAGE_ASSETS;
 $DEFAULT_IMAGE_ASSETS = array(
     'logo-style' => '',
-		'front-cover' => '/css/images/front-cover.jpg',
-		'back-cover' => '/css/images/back-cover.jpg',
-		'back-cover-flipped' => '/css/images/back-cover-flipped.jpg',
-		'left-page' => '/css/images/left-page.jpg',
-		'left-page-flipped' => '/css/images/left-page-flipped.jpg',
-		'right-page' => '/css/images/right-page.jpg'
+		'front-cover' => BOOK_URL_ROOT . '/css/images/front-cover.jpg',
+		'back-cover' => BOOK_URL_ROOT . '/css/images/back-cover.jpg',
+		'back-cover-flipped' => BOOK_URL_ROOT . '/css/images/back-cover-flipped.jpg',
+		'left-page' => BOOK_URL_ROOT . '/css/images/left-page.jpg',
+		'left-page-flipped' => BOOK_URL_ROOT . '/css/images/left-page-flipped.jpg',
+		'right-page' => BOOK_URL_ROOT . '/css/images/right-page.jpg'
 	) ;
 	
 	/**

@@ -39,7 +39,7 @@ function print_locale_thing() {
 		<div id="table-of-contents">
 			<div class="center">
 				<div class="header">
-					<a class="go-back" href="<?php echo BOOK_ROOT; ?>/"><?php print_locale_toc_back() ?></a>
+					<a class="go-back" href="<?php echo BOOK_URL_ROOT; ?>/"><?php print_locale_toc_back() ?></a>
 					<h2><span><?php print_locale_toc_title() ?></span></h2>
 					<hr>
 				</div>

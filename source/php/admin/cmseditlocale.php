@@ -100,7 +100,7 @@ function get_locale_meta_data() {
 		$locale->setLOCALE_NOT_SUPPORTED($_POST['LOCALE_NOT_SUPPORTED']);
 		$locale->setLOCALE_NOT_SUPPORTED_IE($_POST['LOCALE_NOT_SUPPORTED_IE']);
 		$locale->setLOCALE_MENU_TOT($_POST['LOCALE_MENU_TOT']);
-		$locale->setLOCALE_MENU_FORWARD($_POST['LOCALE_MENU_FORWARD']);
+		$locale->setLOCALE_MENU_FOREWORD($_POST['LOCALE_MENU_FOREWORD']);
 		$locale->setLOCALE_MENU_CREDITS($_POST['LOCALE_MENU_CREDITS']);
 		$locale->setLOCALE_SEARCH_PLACEHOLDER($_POST['LOCALE_SEARCH_PLACEHOLDER']);
 		$locale->setLOCALE_SEARCH_INVALID($_POST['LOCALE_SEARCH_INVALID']);
@@ -168,7 +168,7 @@ function get_locale_meta_data() {
 		echo '<h2>Locale Not Supported:  </h2><p><textarea name="LOCALE_NOT_SUPPORTED">'.$locale->getLOCALE_NOT_SUPPORTED().'</textarea></p>';
 		echo '<h2>Locale Not Supported IE:  </h2><p><textarea name="LOCALE_NOT_SUPPORTED_IE">'.$locale->getLOCALE_NOT_SUPPORTED_IE().'</textarea></p>';
 		echo '<h2>Locale Menu Tot:  </h2><p><input type="text" name="LOCALE_MENU_TOT" value="'.$locale->getLOCALE_MENU_TOT().'"></p>';
-		echo '<h2>Locale Menu Forward:  </h2><p><input type="text" name="LOCALE_MENU_FORWARD" value="'.$locale->getLOCALE_MENU_FORWARD().'"></p>';
+		echo '<h2>Locale Menu Forward:  </h2><p><input type="text" name="LOCALE_MENU_FOREWORD" value="'.$locale->getLOCALE_MENU_FOREWORD().'"></p>';
 		echo '<h2>Locale Menu Credits:  </h2><p><input type="text" name="LOCALE_MENU_CREDITS" value="'.$locale->getLOCALE_MENU_CREDITS().'"></p>';
 		echo '<h2>Locale Search Placeholder:  </h2><p><input type="text" name="LOCALE_SEARCH_PLACEHOLDER" value="'.$locale->getLOCALE_SEARCH_PLACEHOLDER().'"></p>';
 		echo '<h2>Locale Search Invalid:  </h2><p><input type="text" name="LOCALE_SEARCH_INVALID" value="'.$locale->getLOCALE_SEARCH_INVALID().'"></p>';
@@ -231,7 +231,7 @@ function get_locale_meta_data() {
 	echo '<h2>Locale Not Supported:  </h2><p><textarea name="LOCALE_NOT_SUPPORTED"></textarea></p>';
 	echo '<h2>Locale Not Supported IE:  </h2><p><textarea name="LOCALE_NOT_SUPPORTED_IE"></textarea></p>';
 	echo '<h2>Locale Menu Tot:  </h2><p><textarea name="LOCALE_MENU_TOT"></textarea></p>';
-	echo '<h2>Locale Menu Forward:  </h2><p><textarea name="LOCALE_MENU_FORWARD"></textarea></p>';
+	echo '<h2>Locale Menu Forward:  </h2><p><textarea name="LOCALE_MENU_FOREWORD"></textarea></p>';
 	echo '<h2>Locale Menu Credits:  </h2><p><textarea name="LOCALE_MENU_CREDITS"></textarea></p>';
 	echo '<h2>Locale Search Placeholder:  </h2><p><textarea name="LOCALE_SEARCH_PLACEHOLDER"></textarea></p>';
 	echo '<h2>Locale Search Invalid:  </h2><p><textarea name="LOCALE_SEARCH_INVALID"></textarea></p>';

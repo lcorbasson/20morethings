@@ -37,7 +37,7 @@ $LOCALE_META_TEXT = array(
 	'LOCALE_BUZZ_MESSAGE' => 'A fun guidebook from Google on things you\'ve always wanted to know about browsers & the web (but were afraid to ask): http://goo.gl/20things' ,
 	'LOCALE_BUZZ_MESSAGE_SINGLE' => 'A fun fact I learned today from Google\'s guidebook to browsers and the web: ' ,
 
-	'LOCALE_SHARING_IMAGE' => 'http://www.20thingsilearned.com/css/images/front-cover.jpg' ,
+	'LOCALE_SHARING_IMAGE' => BOOK_URL_ROOT . '/css/images/front-cover.jpg' ,
 
 	'LOCALE_TITLE' => '20 Things I Learned About Browsers and the Web' ,
 	
@@ -48,7 +48,6 @@ $LOCALE_META_TEXT = array(
 	'LOCALE_MENU_TOT' => 'TABLE OF THINGS' ,
 	'LOCALE_MENU_FOREWORD' => 'FOREWORD' ,
 	'LOCALE_MENU_CREDITS' => 'CREDITS' ,
-	'LOCALE_MENU_FORWARD' => 'FORWARD' ,
 	
 	'LOCALE_SEARCH_PLACEHOLDER' => 'Search Book' ,
 	'LOCALE_SEARCH_INVALID' => 'No results found.' ,
@@ -87,6 +86,9 @@ $LOCALE_META_TEXT = array(
 	
 	'LOCALE_PREVIOUS_PAGE' => 'Previous Page' ,
 	'LOCALE_NEXT_PAGE' => 'Next Page' ,
+	
+	'LOCALE_PAGE_LABEL' => 'Page' ,
+	'LOCALE_PAGES_LABEL' => 'Pages' ,
 	
 	'LOCALE_PRINT_THING_LABEL' => 'Print',
 

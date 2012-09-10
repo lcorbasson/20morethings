@@ -159,29 +159,40 @@ function manageLanguage() {
 function get_locales() {
 	global $ofy, $localeclass;
 //	$locales = $ofy->query($localeclass)-> list ();
-	$returnlocales = '';
+//	$returnlocales = '';
+	$returnlocales = array();
 	$index = 1;
-//	foreach ($locales as $locale) {
+	foreach ($locales as $locale) {
 //		$delim = $index < $locales->size() ? '|' : '';
 //		$returnlocales .= $locale->getId().$delim;
 //		$index++;
-//	}
+		if ( is_dir( BOOK_ROOT . '/locale/' . $locale ) && substr($locale,0,1) !== '.' ) {
+			array_push( $returnlocales, $locale );
+		}
+	}
 
-	return explode('|', $returnlocales);
+//	return explode('|', $returnlocales);
+	return $returnlocales;
 }
 
 function get_display_locales() {
 	global $ofy, $localeclass;
 //	$locales = $ofy->query($localeclass)-> list ();
-	$returnlocales = '';
-	$index = 1;
-//	foreach ($locales as $locale) {
+	$locales = scandir( BOOK_ROOT . '/locale/' );
+//	$returnlocales = '';
+	$returnlocales = array();
+//	$index = 1;
+	foreach ($locales as $locale) {
 //		$delim = $index < $locales->size() ? ',' : '';
 //		$returnlocales .= $locale->getLOCALE_DISPLAY_NAME().'|'.$locale->getId().$delim;
 //		$index++;
-//	}
+		if ( is_dir( BOOK_ROOT . '/locale/' . $locale ) && substr($locale,0,1) !== '.' ) {
+			array_push( $returnlocales, $locale . '|' . $locale ); // TODO: substitute first $locale for display name
+		}
+	}
 
-	return explode(',', $returnlocales);
+//	return explode(',', $returnlocales);
+	return $returnlocales;
 
 }
 
